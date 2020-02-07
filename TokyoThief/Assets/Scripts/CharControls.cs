@@ -45,16 +45,19 @@ public class CharControls : MonoBehaviour
         Ray frontRay = new Ray(transform.position + capsuleOffset, -Vector3.up); // Ray down the outside front of controller
         Ray backRay = new Ray(transform.position - capsuleOffset, -Vector3.up); // Ray down the outside back of controller
 
-        float rayLength = (controller.height / 2) + 0.1f; // Ray starts at middle of controller, so half the height + some extra for the skin, etc
+        float rayLength = (controller.height / 2) + controller.skinWidth; // Ray starts at middle of controller, so half the height + some extra for the skin, etc
 
         // Check center, front, and back to see if they are all grounded before applying gravity
         if (!Physics.Raycast(centerRay, rayLength, groundMask))
         {
+            Debug.Log("cent failure");
             if (!Physics.Raycast(frontRay, rayLength, groundMask))
             {
+                Debug.Log("front failure");
                 if (!Physics.Raycast(backRay, rayLength, groundMask))
                 {
                     isGrounded = false;
+                    Debug.Log("back failure");
                 }
                 else
                 {
@@ -73,10 +76,10 @@ public class CharControls : MonoBehaviour
 
 
 
-        // Debug draw my raycasts
-        Debug.DrawRay(transform.position, -transform.up * rayLength, Color.white);
+        // Debug draw grounding raycasts
+        /*Debug.DrawRay(transform.position, -transform.up * rayLength, Color.white);
         Debug.DrawRay(transform.position + capsuleOffset, -transform.up * rayLength, Color.white);
-        Debug.DrawRay(transform.position - capsuleOffset, -transform.up * rayLength, Color.white);
+        Debug.DrawRay(transform.position - capsuleOffset, -transform.up * rayLength, Color.white);*/
 
         // reset velocity if we hit the ground or ceiling
         if ((isGrounded && velocity.y <= 0) || ((controller.collisionFlags & CollisionFlags.Above) != 0))
@@ -88,7 +91,6 @@ public class CharControls : MonoBehaviour
         {
             // apply gravity
             velocity.y += gravity * Time.deltaTime;
-            
         }
 
         controller.Move(velocity * Time.deltaTime);
@@ -136,6 +138,7 @@ public class CharControls : MonoBehaviour
         //jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            Debug.Log("ump");
             controller.slopeLimit = jumpSlopeLimit;
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
