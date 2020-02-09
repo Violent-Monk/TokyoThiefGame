@@ -27,11 +27,23 @@ public class CharControls : MonoBehaviour
     bool isGrounded = true;
 
     CharacterController controller;
-    
+
+    SpriteRenderer hiroRenderer;
+    public Sprite hiroNW;
+    public Sprite hiroSW;
+    public Sprite hiroSE;
+    public Sprite hiroNE;
+    public Sprite hiroN;
+    public Sprite hiroE;
+    public Sprite hiroW;
+    public Sprite hiroS;
+
     // Start is called before the first frame update
     void Start()
     {
+        controller = GetComponent(typeof(CharacterController)) as CharacterController;
         Reorient();
+        hiroRenderer = controller.GetComponentInChildren(typeof(SpriteRenderer)) as SpriteRenderer;
     }
 
     // Update is called once per frame
@@ -50,14 +62,11 @@ public class CharControls : MonoBehaviour
         // Check center, front, and back to see if they are all grounded before applying gravity
         if (!Physics.Raycast(centerRay, rayLength, groundMask))
         {
-            Debug.Log("cent failure");
             if (!Physics.Raycast(frontRay, rayLength, groundMask))
             {
-                Debug.Log("front failure");
                 if (!Physics.Raycast(backRay, rayLength, groundMask))
                 {
                     isGrounded = false;
-                    Debug.Log("back failure");
                 }
                 else
                 {
@@ -89,10 +98,11 @@ public class CharControls : MonoBehaviour
         }
         else if (!isGrounded)
         {
-            // apply gravity
+            // in the air, so add downward y velocity
             velocity.y += gravity * Time.deltaTime;
         }
-
+        
+        // apply gravity (if there is any)
         controller.Move(velocity * Time.deltaTime);
 
         if (Input.anyKey)
@@ -103,7 +113,7 @@ public class CharControls : MonoBehaviour
 	
 	void Move()
 	{
-		Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+        //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
 		Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
 		Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
 	
@@ -115,6 +125,49 @@ public class CharControls : MonoBehaviour
         }
 
         Reorient();
+        Debug.Log("X:" + heading.x);
+        Debug.Log("Z:" + heading.z);
+        if (heading.z == 0)
+        {
+            if (heading.x == 1)
+            {
+                hiroRenderer.sprite = hiroNE;
+            }
+            else
+            {
+                hiroRenderer.sprite = hiroSW;
+            }
+        }
+        else if (heading.z == -1)
+        {
+            hiroRenderer.sprite = hiroSE;
+        }
+        else if (heading.z == 1)
+        {
+            hiroRenderer.sprite = hiroNW;
+        }
+        else if (heading.z > 0)
+        {
+            if (heading.x > 0)
+            {
+                hiroRenderer.sprite = hiroN;
+            }
+            else
+            {
+                hiroRenderer.sprite = hiroW;
+            }
+        }
+        else if (heading.z < 0)
+        {
+            if (heading.x < 0)
+            {
+                hiroRenderer.sprite = hiroS;
+            }
+            else
+            {
+                hiroRenderer.sprite = hiroE;
+            }
+        }
 
         //crouch
         if (Input.GetKeyDown(KeyCode.LeftControl) && isGrounded == true)
@@ -138,7 +191,6 @@ public class CharControls : MonoBehaviour
         //jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            Debug.Log("ump");
             controller.slopeLimit = jumpSlopeLimit;
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
@@ -146,6 +198,7 @@ public class CharControls : MonoBehaviour
         // horizontal movement
         heading *= moveSpeed;
         controller.Move(heading * Time.deltaTime);
+        
 	}
 
     void Reorient()
@@ -157,7 +210,6 @@ public class CharControls : MonoBehaviour
             forward.y = 0;
             forward = Vector3.Normalize(forward);
             right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
-            controller = GetComponent<CharacterController>();
         }
     }
 
