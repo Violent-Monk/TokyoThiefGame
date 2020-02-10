@@ -6,7 +6,6 @@ public class CamControls : MonoBehaviour
 {
     public GameObject player; //Move player Prefab into this slot to lock camera onto player
     Transform target;
-    SpriteRenderer hiroRenderer;
 
     public float smoothSpeed = 0.125f; //Camera smooth movement speed
 
@@ -20,7 +19,6 @@ public class CamControls : MonoBehaviour
     {
         turnAngle = transform.rotation;
         target = player.transform;
-        hiroRenderer = player.GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -45,6 +43,5 @@ public class CamControls : MonoBehaviour
     void Rotate()
     {    
         transform.rotation = Quaternion.Slerp(transform.rotation, turnAngle, smoothFactor);
-        
     }
 }
