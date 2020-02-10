@@ -7,7 +7,7 @@ public class CharControls : MonoBehaviour
 
     [SerializeField]
     float moveSpeed = 4f;
-    float runSpeed = 4f;
+    float runSpeed = 8f;
     float crouchSpeed = 2f;
 
     public float gravity = -20.0f;
