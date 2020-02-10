@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class CamControls : MonoBehaviour
 {
-    public Transform target; //Move player Prefab into this slot to lock camera onto player
-
-    public float smoothSpeed = 0.125f; //Camera smooth movement speed
-
     [Range(0.01f, 1.0f)]
     public float smoothFactor = 0.5f;
 
@@ -22,8 +18,6 @@ public class CamControls : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = target.position; //makes camera focus on player target
-
         if (transform.rotation == turnAngle)
         {
             if (Input.GetKeyDown(KeyCode.Q))

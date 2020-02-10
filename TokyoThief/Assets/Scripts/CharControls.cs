@@ -27,23 +27,11 @@ public class CharControls : MonoBehaviour
     bool isGrounded = true;
 
     CharacterController controller;
-
-    SpriteRenderer hiroRenderer;
-    public Sprite hiroNW;
-    public Sprite hiroSW;
-    public Sprite hiroSE;
-    public Sprite hiroNE;
-    public Sprite hiroN;
-    public Sprite hiroE;
-    public Sprite hiroW;
-    public Sprite hiroS;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
         Reorient();
-        hiroRenderer = controller.GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -57,7 +45,7 @@ public class CharControls : MonoBehaviour
         Ray frontRay = new Ray(transform.position + capsuleOffset, -Vector3.up); // Ray down the outside front of controller
         Ray backRay = new Ray(transform.position - capsuleOffset, -Vector3.up); // Ray down the outside back of controller
 
-        float rayLength = (controller.height / 2) + controller.skinWidth; // Ray starts at middle of controller, so half the height + some extra for the skin, etc
+        float rayLength = (controller.height / 2) + 0.1f; // Ray starts at middle of controller, so half the height + some extra for the skin, etc
 
         // Check center, front, and back to see if they are all grounded before applying gravity
         if (!Physics.Raycast(centerRay, rayLength, groundMask))
@@ -85,10 +73,10 @@ public class CharControls : MonoBehaviour
 
 
 
-        // Debug draw grounding raycasts
-        /*Debug.DrawRay(transform.position, -transform.up * rayLength, Color.white);
+        // Debug draw my raycasts
+        Debug.DrawRay(transform.position, -transform.up * rayLength, Color.white);
         Debug.DrawRay(transform.position + capsuleOffset, -transform.up * rayLength, Color.white);
-        Debug.DrawRay(transform.position - capsuleOffset, -transform.up * rayLength, Color.white);*/
+        Debug.DrawRay(transform.position - capsuleOffset, -transform.up * rayLength, Color.white);
 
         // reset velocity if we hit the ground or ceiling
         if ((isGrounded && velocity.y <= 0) || ((controller.collisionFlags & CollisionFlags.Above) != 0))
@@ -98,11 +86,11 @@ public class CharControls : MonoBehaviour
         }
         else if (!isGrounded)
         {
-            // in the air, so add downward y velocity
+            // apply gravity
             velocity.y += gravity * Time.deltaTime;
+            
         }
-        
-        // apply gravity (if there is any)
+
         controller.Move(velocity * Time.deltaTime);
 
         if (Input.anyKey)
@@ -113,64 +101,18 @@ public class CharControls : MonoBehaviour
 	
 	void Move()
 	{
-        //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-        float horzMovement = Input.GetAxis("HorizontalKey");
-        float vertMovement = Input.GetAxis("VerticalKey");
-
-        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
+		Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+		Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
 		Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+	
+		Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
-        Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
-        ;
         if (heading != Vector3.zero)
         {
             transform.forward = heading;
         }
 
         Reorient();
-
-        // placeholder sprite changing
-        if (vertMovement == -1)
-        {
-            if (horzMovement == 1)
-            {
-                hiroRenderer.sprite = hiroSE;
-            }
-            else if (horzMovement == -1)
-            {
-                hiroRenderer.sprite = hiroSW;
-            }
-            else
-            {
-                hiroRenderer.sprite = hiroS;
-            }
-        }
-        else if (vertMovement == 1)
-        {
-            if (horzMovement == 1)
-            {
-                hiroRenderer.sprite = hiroNE;
-            }
-            else if (horzMovement == -1)
-            {
-                hiroRenderer.sprite = hiroNW;
-            }
-            else
-            {
-                hiroRenderer.sprite = hiroN;
-            }
-        }
-        else
-        {
-            if (horzMovement == 1)
-            {
-                hiroRenderer.sprite = hiroE;
-            }
-            else if (horzMovement == -1)
-            {
-                hiroRenderer.sprite = hiroW;
-            }
-        }
 
         //crouch
         if (Input.GetKeyDown(KeyCode.LeftControl) && isGrounded == true)
@@ -201,12 +143,10 @@ public class CharControls : MonoBehaviour
         // horizontal movement
         heading *= moveSpeed;
         controller.Move(heading * Time.deltaTime);
-        
 	}
 
     void Reorient()
     {
-        // reorient controls if camera rotated
         if (currDir != Camera.main.transform.forward)
         {
             forward = Camera.main.transform.forward;
@@ -214,6 +154,7 @@ public class CharControls : MonoBehaviour
             forward.y = 0;
             forward = Vector3.Normalize(forward);
             right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+            controller = GetComponent<CharacterController>();
         }
     }
 
