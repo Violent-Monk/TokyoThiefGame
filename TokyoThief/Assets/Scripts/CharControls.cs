@@ -41,9 +41,9 @@ public class CharControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent(typeof(CharacterController)) as CharacterController;
+        controller = GetComponent<CharacterController>();
         Reorient();
-        hiroRenderer = controller.GetComponentInChildren(typeof(SpriteRenderer)) as SpriteRenderer;
+        hiroRenderer = controller.GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -114,58 +114,61 @@ public class CharControls : MonoBehaviour
 	void Move()
 	{
         //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-		Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
-		Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
-	
-		Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+        float horzMovement = Input.GetAxis("HorizontalKey");
+        float vertMovement = Input.GetAxis("VerticalKey");
 
+        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
+		Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+
+        Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+        ;
         if (heading != Vector3.zero)
         {
             transform.forward = heading;
         }
 
         Reorient();
-        Debug.Log("X:" + heading.x);
-        Debug.Log("Z:" + heading.z);
-        if (heading.z == 0)
+
+        // placeholder sprite changing
+        if (vertMovement == -1)
         {
-            if (heading.x == 1)
+            if (horzMovement == 1)
             {
-                hiroRenderer.sprite = hiroNE;
+                hiroRenderer.sprite = hiroSE;
             }
-            else
+            else if (horzMovement == -1)
             {
                 hiroRenderer.sprite = hiroSW;
             }
-        }
-        else if (heading.z == -1)
-        {
-            hiroRenderer.sprite = hiroSE;
-        }
-        else if (heading.z == 1)
-        {
-            hiroRenderer.sprite = hiroNW;
-        }
-        else if (heading.z > 0)
-        {
-            if (heading.x > 0)
-            {
-                hiroRenderer.sprite = hiroN;
-            }
             else
-            {
-                hiroRenderer.sprite = hiroW;
-            }
-        }
-        else if (heading.z < 0)
-        {
-            if (heading.x < 0)
             {
                 hiroRenderer.sprite = hiroS;
             }
+        }
+        else if (vertMovement == 1)
+        {
+            if (horzMovement == 1)
+            {
+                hiroRenderer.sprite = hiroNE;
+            }
+            else if (horzMovement == -1)
+            {
+                hiroRenderer.sprite = hiroNW;
+            }
             else
             {
+                hiroRenderer.sprite = hiroN;
+            }
+        }
+        else
+        {
+            if (horzMovement == 1)
+            {
                 hiroRenderer.sprite = hiroE;
+            }
+            else if (horzMovement == -1)
+            {
+                hiroRenderer.sprite = hiroW;
             }
         }
 
@@ -203,6 +206,7 @@ public class CharControls : MonoBehaviour
 
     void Reorient()
     {
+        // reorient controls if camera rotated
         if (currDir != Camera.main.transform.forward)
         {
             forward = Camera.main.transform.forward;
