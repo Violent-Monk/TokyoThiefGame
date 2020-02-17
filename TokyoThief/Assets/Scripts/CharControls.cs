@@ -10,6 +10,9 @@ public class CharControls : MonoBehaviour
     float runSpeed = 8f;
     float crouchSpeed = 2f;
 
+    float horzMovement = 0;
+    float vertMovement = 0;
+
     public float gravity = -20.0f;
     public float jumpHeight = 3f;
 
@@ -27,6 +30,8 @@ public class CharControls : MonoBehaviour
     bool isGrounded = true;
 
     CharacterController controller;
+
+    public Animator animator;
 
     SpriteRenderer hiroRenderer;
     public Sprite hiroNW;
@@ -104,24 +109,26 @@ public class CharControls : MonoBehaviour
         
         // apply gravity (if there is any)
         controller.Move(velocity * Time.deltaTime);
-
+        //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+        horzMovement = Input.GetAxis("HorizontalKey");
+        vertMovement = Input.GetAxis("VerticalKey");
+        animator.SetFloat("Magnitude", Mathf.Abs(horzMovement) + Mathf.Abs(vertMovement));
         if (Input.anyKey)
-        {        
-            Move();
+        {       
+            Move();           
         }		
     }
 	
 	void Move()
 	{
-        //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-        float horzMovement = Input.GetAxis("HorizontalKey");
-        float vertMovement = Input.GetAxis("VerticalKey");
-
         Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
 		Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
 
+        animator.SetFloat("Horizontal", horzMovement);
+        animator.SetFloat("Vertical", vertMovement);
+        
+
         Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
-        ;
         if (heading != Vector3.zero)
         {
             transform.forward = heading;
