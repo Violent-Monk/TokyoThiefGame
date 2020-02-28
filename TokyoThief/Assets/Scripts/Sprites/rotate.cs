@@ -6,7 +6,8 @@ public class rotate : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     public bool flipped;
-    public Transform cam;
+    Transform cam;
+    Camera gameCam;
     SpriteRenderer[] sprites;
     public Sprite[] SWSprites;
     public Sprite[] NWSprites;
@@ -17,6 +18,10 @@ public class rotate : MonoBehaviour
     void Start()
     {
         sprites = GetComponentsInChildren<SpriteRenderer>();
+        cam = GameObject.Find("CameraObject").transform;
+        gameCam = cam.GetComponentInChildren<Camera>();
+        gameCam.transparencySortMode = TransparencySortMode.CustomAxis;
+        gameCam.transparencySortAxis = new Vector3(1f, 0f, 1f);
     }
 
     // Update is called once per frame
@@ -71,28 +76,34 @@ public class rotate : MonoBehaviour
         }   
         */
 
-        if (cam.rotation.eulerAngles.y == 0)
+        if (cam.rotation.eulerAngles.y > -2 && cam.rotation.eulerAngles.y < 2)
         {
             swap = (camDir != "NE" ? true : false);
             camDir = "NE";
+            gameCam.transparencySortAxis = new Vector3(1f, 0f, 1f);
         }
-        else if (cam.rotation.eulerAngles.y > 1)
-        {
-            swap = (camDir != "NW" ? true : false);
-            camDir = "NW";
-        }
-        else if (cam.rotation.eulerAngles.y < -135)
-        {
-            swap = (camDir != "SW" ? true : false);
-            camDir = "SW";
-        }
-        else
+        else if(cam.rotation.eulerAngles.y > 1 && cam.rotation.eulerAngles.y < 135)
         {
             swap = (camDir != "SE" ? true : false);
             camDir = "SE";
+            gameCam.transparencySortAxis = new Vector3(1f, 0f, -1f);
         }
+        else if (cam.rotation.eulerAngles.y > 135 && cam.rotation.eulerAngles.y < 225)
+        {
+            swap = (camDir != "SW" ? true : false);
+            camDir = "SW";
+            gameCam.transparencySortAxis = new Vector3(-1f, 0f, -1f);
+        }
+        else
+        {
+            swap = (camDir != "NW" ? true : false);
+            camDir = "NW";
+            gameCam.transparencySortAxis = new Vector3(-1f, 0f, 1f);
+        }
+        
+       
 
-        Debug.Log(camDir + " " + swap);
+        Debug.Log(camDir + " " + swap + "  " + cam.rotation.eulerAngles.y);
 
         if (swap)
         {
