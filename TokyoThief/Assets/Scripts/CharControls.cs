@@ -34,14 +34,8 @@ public class CharControls : MonoBehaviour
     public Animator animator;
 
     SpriteRenderer hiroRenderer;
-    public Sprite hiroNW;
-    public Sprite hiroSW;
-    public Sprite hiroSE;
-    public Sprite hiroNE;
-    public Sprite hiroN;
-    public Sprite hiroE;
-    public Sprite hiroW;
-    public Sprite hiroS;
+
+    Interactable currentInteractable;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +48,6 @@ public class CharControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         // How much to offset my raycasts from center of controller
         Vector3 capsuleOffset = new Vector3(controller.radius, 0, 0);
 
@@ -114,7 +107,11 @@ public class CharControls : MonoBehaviour
         vertMovement = Input.GetAxis("VerticalKey");
         animator.SetFloat("Magnitude", Mathf.Abs(horzMovement) + Mathf.Abs(vertMovement));
         if (Input.anyKey)
-        {       
+        {
+            if (Input.GetKeyDown(KeyCode.F) && currentInteractable != null)
+            {
+                currentInteractable.Interact();
+            }
             Move();           
         }		
     }
@@ -135,49 +132,6 @@ public class CharControls : MonoBehaviour
         }
 
         Reorient();
-
-        // placeholder sprite changing
-        if (vertMovement == -1)
-        {
-            if (horzMovement == 1)
-            {
-                hiroRenderer.sprite = hiroSE;
-            }
-            else if (horzMovement == -1)
-            {
-                hiroRenderer.sprite = hiroSW;
-            }
-            else
-            {
-                hiroRenderer.sprite = hiroS;
-            }
-        }
-        else if (vertMovement == 1)
-        {
-            if (horzMovement == 1)
-            {
-                hiroRenderer.sprite = hiroNE;
-            }
-            else if (horzMovement == -1)
-            {
-                hiroRenderer.sprite = hiroNW;
-            }
-            else
-            {
-                hiroRenderer.sprite = hiroN;
-            }
-        }
-        else
-        {
-            if (horzMovement == 1)
-            {
-                hiroRenderer.sprite = hiroE;
-            }
-            else if (horzMovement == -1)
-            {
-                hiroRenderer.sprite = hiroW;
-            }
-        }
 
         //crouch
         if (Input.GetKeyDown(KeyCode.LeftControl) && isGrounded == true)
@@ -224,4 +178,8 @@ public class CharControls : MonoBehaviour
         }
     }
 
+    public void setInteractable(Interactable interactable)
+    {
+        currentInteractable = interactable;
+    }
 }

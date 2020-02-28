@@ -8,6 +8,7 @@ public class renderOrder : MonoBehaviour
     public Transform obj;
     public Transform player;
     SpriteRenderer spriteRenderer;
+    public bool axis = false; // false == NWSE, true == NESW
 
     // Start is called before the first frame update
     void Start()
@@ -18,13 +19,16 @@ public class renderOrder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (obj.position.z > player.position.z)
+        if (axis)
         {
-            spriteRenderer.sortingOrder = -1;
+            //spriteRenderer.sortingOrder = (int)(player.position.x - obj.position.x);
+            
+             spriteRenderer.sortingOrder = (int)(player.position.x - transform.position.x);
+            
         }
         else
         {
-            spriteRenderer.sortingOrder = 1;
+            spriteRenderer.sortingOrder = (int)(player.position.z - transform.position.z);     
         }
     }
 }
