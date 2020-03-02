@@ -24,6 +24,7 @@ public class EnemyPatrol : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
+        transform.LookAt(moveSpots[randomSpot].position);
 
         if(Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
         {
