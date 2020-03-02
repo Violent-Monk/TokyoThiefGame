@@ -35,7 +35,7 @@ public class rotate : MonoBehaviour
     void Update()
     {
         // should probably move this to CamControls
-        if (cam.rotation.eulerAngles.y > 275 || (cam.rotation.eulerAngles.y < 2 && cam.rotation.eulerAngles.y > -2))
+        if (cam.rotation.eulerAngles.y > 275 || (cam.rotation.eulerAngles.y < 45 && cam.rotation.eulerAngles.y > -2))
         {
             swap = (camDir != "NE" ? true : false);
             camDir = "NE";
@@ -64,97 +64,24 @@ public class rotate : MonoBehaviour
         {
             if (camDir == "SW")
             {
-                /*for (int i = 0; i < sprites.Length; ++i)
-                {
-                    sprites[i].sprite = SWSprites[i];
-                    if (i == 0)
-                    {
-                        sprites[i].transform.localPosition = new Vector3(-0.26f, 0.56f, 6.53f);
-                    }
-                    else if (i == sprites.Length - 1)
-                    {
-                        sprites[i].transform.localPosition = new Vector3(0.49f, 0.56f, -6.958f);
-                    }
-                    else
-                    {
-                        //sprites[i].transform.position = sprites[i].transform.position + new Vector3(2.5f, 0f, -0.2f);
-                    }
-
-                }
-                sprites[0].sprite = SWSprites[SWSprites.Length - 1];
-                sprites[sprites.Length - 1].sprite = SWSprites[0];*/
                 currActive.SetActive(false);
                 spriteSW.SetActive(true);
                 currActive = spriteSW;
             }
             else if (camDir == "SE")
             {
-                /* for (int i = 0; i < sprites.Length; ++i)
-                 {
-                     sprites[i].sprite = NWSprites[i];
-                     if (i == 0)
-                     {
-                         sprites[i].transform.localPosition = new Vector3(0.47f, 0.56f, 6.88f);
-                     }
-                     else if (i == sprites.Length - 1)
-                     {
-                         sprites[i].transform.localPosition = new Vector3(-0.27f, 0.566f, -6.79f);
-                     }
-                     else
-                     {
-                         //sprites[i].transform.position = sprites[i].transform.position + new Vector3(2.5f, 0f, -0.2f);
-                     }
-
-                 }
-                 sprites[0].sprite = NWSprites[0];
-                 sprites[sprites.Length - 1].sprite = NWSprites[NWSprites.Length - 1];*/
                 currActive.SetActive(false);
                 spriteSE.SetActive(true);
                 currActive = spriteSE;
             }
             else if (camDir == "NW")
             {
-                /*for (int i = 0; i < sprites.Length; ++i)
-                {
-                    sprites[i].sprite = NWSprites[i];
-                    if (i == 0)
-                    {
-                        sprites[i].transform.localPosition = new Vector3(0.5f, 0.566f, 6.88f);
-                    }
-                    else if (i == sprites.Length - 1)
-                    {
-                        sprites[i].transform.localPosition = new Vector3(-0.28f, 0.566f, -6.958f);
-                    }
-                    else
-                    {
-                        // sprites[i].transform.position = sprites[i].transform.position - new Vector3(3.5f, 0f, -0.2f);
-                    }
-
-
-                }
-                sprites[0].sprite = NWSprites[NWSprites.Length - 1];
-                sprites[sprites.Length - 1].sprite = NWSprites[0];*/
                 currActive.SetActive(false);
                 spriteNW.SetActive(true);
                 currActive = spriteNW;
             }
             else if (camDir == "NE")
             {
-                /* for (int i = 0; i < sprites.Length; ++i)
-                 {
-                     sprites[i].sprite = SWSprites[i];
-                     if (i == 0)
-                     {
-                         sprites[i].transform.localPosition = new Vector3(0.05f, 0.566f, 5.96f);
-                     }
-                     else if (i == sprites.Length - 1)
-                     {
-                         sprites[i].transform.localPosition = new Vector3(0.59f, 0.84f, -9.22f);
-                     }
-
-                 }
-                 sprites[0].sprite = SWSprites[0];
-                 sprites[sprites.Length - 1].sprite = SWSprites[SWSprites.Length - 1];*/
                 currActive.SetActive(false);
                 spriteNE.SetActive(true);
                 currActive = spriteNE;

@@ -16,5 +16,6 @@ public class PickedUpItemReaction : DelayedReaction
     protected override void ImmediateReaction()
     {
         inventory.AddItem(item);
+        
     }
 }

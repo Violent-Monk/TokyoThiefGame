@@ -112,6 +112,7 @@ public class CharControls : MonoBehaviour
             {
                 currentInteractable.Interact();
             }
+
             Move();           
         }		
     }
@@ -121,10 +122,13 @@ public class CharControls : MonoBehaviour
         Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
 		Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
 
-        animator.SetFloat("Horizontal", horzMovement);
-        animator.SetFloat("Vertical", vertMovement);
-        
-
+        // maintain sprite direction if we didn't move
+        if (!(rightMovement == Vector3.zero && upMovement == Vector3.zero))
+        {
+            animator.SetFloat("Horizontal", horzMovement);
+            animator.SetFloat("Vertical", vertMovement);
+        }
+  
         Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
         if (heading != Vector3.zero)
         {

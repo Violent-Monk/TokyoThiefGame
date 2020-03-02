@@ -8,7 +8,6 @@ public class SetInteractable : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Log("HIT");
             CharControls controllerScript = other.GetComponent<CharControls>();
             controllerScript.setInteractable(GetComponent<Interactable>());
         }
@@ -18,7 +17,6 @@ public class SetInteractable : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("UNHIT");
             CharControls controllerScript = other.GetComponent<CharControls>();
             controllerScript.setInteractable(null);
         }

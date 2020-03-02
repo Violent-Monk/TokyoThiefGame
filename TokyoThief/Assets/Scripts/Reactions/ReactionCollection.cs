@@ -9,6 +9,7 @@ public class ReactionCollection : MonoBehaviour
         for (int i = 0; i < reactions.Length; i++)
         {
             DelayedReaction delayedReaction = reactions[i] as DelayedReaction;
+            
 
             if(delayedReaction)
             {

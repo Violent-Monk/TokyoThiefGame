@@ -18,7 +18,6 @@ public abstract class DelayedReaction : Reaction
     public new void Init()
     {
         wait = new WaitForSeconds(delay);
-
         SpecificInit();
     }
 

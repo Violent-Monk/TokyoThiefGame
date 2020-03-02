@@ -11,15 +11,25 @@ public class EnemyPatrol : MonoBehaviour
     public float startWaitTime;
 
     public Transform[] moveSpots;
-    private int randomSpot;
+    private int nextSpot;
 
     public Animator animator;
+
+    public bool random;
 
     // Start is called before the first frame update
     void Start()
     {
         waitTime = startWaitTime;
-        randomSpot = Random.Range(0, moveSpots.Length);
+
+        if(random)
+        {
+            nextSpot = Random.Range(0, moveSpots.Length);
+        }
+        else
+        {
+            nextSpot = 0;
+        }
         if (waitTime == 0)
         {
             animator.SetBool("Idle", false);
@@ -29,14 +39,25 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
-        transform.LookAt(moveSpots[randomSpot].position);
+        transform.position = Vector3.MoveTowards(transform.position, moveSpots[nextSpot].position, speed * Time.deltaTime);
+        transform.LookAt(moveSpots[nextSpot].position);
         animator.SetFloat("Direction", transform.rotation.eulerAngles.y);
 
-        if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
+        if (Vector3.Distance(transform.position, moveSpots[nextSpot].position) < 0.2f)
         {
             if(waitTime <= 0){
-                randomSpot = Random.Range(0, moveSpots.Length);
+                if (random)
+                {
+                    nextSpot = Random.Range(0, moveSpots.Length);
+                }
+                else if (nextSpot == moveSpots.Length - 1)
+                {
+                    nextSpot = 0;
+                }
+                else
+                {
+                    nextSpot++;
+                }
                 waitTime = startWaitTime;
                 animator.SetBool("Idle", false);
             } else {
