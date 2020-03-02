@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd190fbd039fc94ba23ee43362d59cf, type: 3}
+  m_Name: AllConditions
+  m_EditorClassIdentifier: 
+  conditions:
+  - {fileID: 3922247494185481834}
+  - {fileID: 3083833263436479275}
+  - {fileID: 2113994902865227388}
+--- !u!114 &2113994902865227388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e816b9ee4a60742af4a087af8ea24b, type: 3}
+  m_Name: PickedUpGold
+  m_EditorClassIdentifier: 
+  description: PickedUpGold
+  satisfied: 0
+  hash: 208487941
+--- !u!114 &3083833263436479275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e816b9ee4a60742af4a087af8ea24b, type: 3}
+  m_Name: PickedUpCode
+  m_EditorClassIdentifier: 
+  description: PickedUpCode
+  satisfied: 0
+  hash: 1020357580
+--- !u!114 &3922247494185481834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e816b9ee4a60742af4a087af8ea24b, type: 3}
+  m_Name: PickedUpKey
+  m_EditorClassIdentifier: 
+  description: PickedUpKey
+  satisfied: 0
+  hash: 1243592844
