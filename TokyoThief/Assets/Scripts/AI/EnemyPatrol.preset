@@ -9,7 +9,7 @@ Preset:
   m_Name: EnemyPatrol
   m_TargetType:
     m_NativeTypeID: 114
-    m_ManagedTypePPtr: {fileID: 11500000, guid: 54aace051985f214f95ea1eef620a536,
+    m_ManagedTypePPtr: {fileID: 11500000, guid: c626798568e40ad478e12cb0dcd9be3f,
       type: 3}
     m_ManagedTypeFallback: 
   m_Properties:

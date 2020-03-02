@@ -42,27 +42,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 594467194781549188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54aace051985f214f95ea1eef620a536, type: 3}
+  m_Script: {fileID: 11500000, guid: c626798568e40ad478e12cb0dcd9be3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
   startWaitTime: 0
-  moveSpots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  moveSpots: []
   animator: {fileID: 594467194501411885}
   random: 0
 --- !u!1 &594467195116247722
