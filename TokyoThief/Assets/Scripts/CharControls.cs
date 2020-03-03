@@ -55,7 +55,7 @@ public class CharControls : MonoBehaviour
         Ray frontRay = new Ray(transform.position + capsuleOffset, -Vector3.up); // Ray down the outside front of controller
         Ray backRay = new Ray(transform.position - capsuleOffset, -Vector3.up); // Ray down the outside back of controller
 
-        float rayLength = (controller.height / 2) + controller.skinWidth; // Ray starts at middle of controller, so half the height + some extra for the skin, etc
+        float rayLength = (controller.radius); // Ray starts at middle of controller, so half the height + some extra for the skin, etc
 
         // Check center, front, and back to see if they are all grounded before applying gravity
         if (!Physics.Raycast(centerRay, rayLength, groundMask))
@@ -84,9 +84,9 @@ public class CharControls : MonoBehaviour
 
 
         // Debug draw grounding raycasts
-        /*Debug.DrawRay(transform.position, -transform.up * rayLength, Color.white);
+        Debug.DrawRay(transform.position, -transform.up * rayLength, Color.white);
         Debug.DrawRay(transform.position + capsuleOffset, -transform.up * rayLength, Color.white);
-        Debug.DrawRay(transform.position - capsuleOffset, -transform.up * rayLength, Color.white);*/
+        Debug.DrawRay(transform.position - capsuleOffset, -transform.up * rayLength, Color.white);
 
         // reset velocity if we hit the ground or ceiling
         if ((isGrounded && velocity.y <= 0) || ((controller.collisionFlags & CollisionFlags.Above) != 0))
@@ -184,6 +184,14 @@ public class CharControls : MonoBehaviour
 
     public void setInteractable(Interactable interactable)
     {
-        currentInteractable = interactable;
+        if (interactable == null)
+        {
+            currentInteractable = null;
+        }
+        else
+        {
+            currentInteractable = interactable;
+        }
+        
     }
 }

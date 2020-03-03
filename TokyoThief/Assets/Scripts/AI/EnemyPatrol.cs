@@ -9,6 +9,7 @@ public class EnemyPatrol : MonoBehaviour
     public float speed;
     private float waitTime;
     public float startWaitTime;
+    Transform cam;
 
     public Transform[] moveSpots;
     private int nextSpot;
@@ -21,8 +22,9 @@ public class EnemyPatrol : MonoBehaviour
     void Start()
     {
         waitTime = startWaitTime;
+        cam = GameObject.Find("CameraObject").transform;
 
-        if(random)
+        if (random)
         {
             nextSpot = Random.Range(0, moveSpots.Length);
         }
@@ -41,7 +43,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, moveSpots[nextSpot].position, speed * Time.deltaTime);
         transform.LookAt(moveSpots[nextSpot].position);
-        animator.SetFloat("Direction", transform.rotation.eulerAngles.y);
+        animator.SetFloat("Direction", Mathf.Repeat(transform.rotation.eulerAngles.y-cam.rotation.eulerAngles.y, 360));
 
         if (Vector3.Distance(transform.position, moveSpots[nextSpot].position) < 0.2f)
         {
