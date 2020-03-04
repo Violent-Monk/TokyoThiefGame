@@ -3587,22 +3587,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395111813}
   m_CullTransparentMesh: 0
---- !u!114 &408698933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4ffeed126ee6c1488a7228fcfef24c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: HasGoldReaction
-  requiredConditions:
-  - {fileID: 0}
-  reactionCollection: {fileID: 0}
 --- !u!1 &409400238
 GameObject:
   m_ObjectHideFlags: 0
@@ -4081,13 +4065,13 @@ PrefabInstance:
     - target: {fileID: 7532961026149870602, guid: 1c5b760399295ed409133b212666cf1d,
         type: 3}
       propertyPath: conditionCollections.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7532961026149870602, guid: 1c5b760399295ed409133b212666cf1d,
         type: 3}
       propertyPath: conditionCollections.Array.data[0]
       value: 
-      objectReference: {fileID: 408698933}
+      objectReference: {fileID: 848562884}
     - target: {fileID: 7532961026149870602, guid: 1c5b760399295ed409133b212666cf1d,
         type: 3}
       propertyPath: defaultReactionCollection
@@ -8180,6 +8164,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847899245}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &848562884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffeed126ee6c1488a7228fcfef24c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: HasGoldReaction
+  requiredConditions:
+  - {fileID: 1649895750}
+  reactionCollection: {fileID: 1847269034}
 --- !u!1 &853544075
 GameObject:
   m_ObjectHideFlags: 0
@@ -16404,6 +16404,21 @@ RectTransform:
   m_AnchoredPosition: {x: -63, y: -393}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1649895750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e816b9ee4a60742af4a087af8ea24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: PickedUpGold
+  satisfied: 1
+  hash: 208487941
 --- !u!1 &1652061083
 GameObject:
   m_ObjectHideFlags: 0
