@@ -8,8 +8,14 @@ public class PauseMenu : MonoBehaviour
 
     public static bool GameIsPaused = false;
 
-    public GameObject pauseMenuUI;
-    public GameObject controlsMenuUI;
+    GameObject pauseMenuUI;
+    GameObject controlsMenuUI;
+
+    private void Start()
+    {
+        pauseMenuUI = transform.GetChild(0).gameObject;
+        controlsMenuUI = transform.GetChild(1).gameObject;
+    }
 
     // Update is called once per frame
     void Update()
