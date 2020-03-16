@@ -16,8 +16,8 @@ public class pickup : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)) {
-		//	if (item[i] = null | item[0] = true | item[1] = true){
-			//	pickupitem.Play();
+			//if () {
+				//pickupitem.Play();
 			//}
 		}
     }
