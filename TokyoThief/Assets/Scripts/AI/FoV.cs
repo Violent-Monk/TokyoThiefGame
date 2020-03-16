@@ -75,7 +75,7 @@ public class FoV : MonoBehaviour
                     // we have line of sight
                     visibleTargets.Add(target);
                     fovMat.SetColor("_Color", colorAlert);
-                    FindObjectOfType<GameManager>().EndGame();
+                    FindObjectOfType<GameManager>().EndGame(true);
                 }
             }
         }

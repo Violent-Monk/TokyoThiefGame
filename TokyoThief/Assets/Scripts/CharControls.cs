@@ -99,22 +99,28 @@ public class CharControls : MonoBehaviour
             // in the air, so add downward y velocity
             velocity.y += gravity * Time.deltaTime;
         }
-        
-        // apply gravity (if there is any)
-        controller.Move(velocity * Time.deltaTime);
-        //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-        horzMovement = Input.GetAxis("HorizontalKey");
-        vertMovement = Input.GetAxis("VerticalKey");
-        animator.SetFloat("Magnitude", Mathf.Abs(horzMovement) + Mathf.Abs(vertMovement));
-        if (Input.anyKey)
-        {
-            if (Input.GetKeyDown(KeyCode.F) && currentInteractable != null)
-            {
-                currentInteractable.Interact();
-            }
 
-            Move();           
-        }		
+        // Only allow movement if game is not over
+        if(!(FindObjectOfType<GameManager>().gameHasEnded))
+        {
+            // apply gravity (if there is any)
+            controller.Move(velocity * Time.deltaTime);
+            //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+            horzMovement = Input.GetAxis("HorizontalKey");
+            vertMovement = Input.GetAxis("VerticalKey");
+            animator.SetFloat("Magnitude", Mathf.Abs(horzMovement) + Mathf.Abs(vertMovement));
+            if (Input.anyKey)
+            {
+                if (Input.GetKeyDown(KeyCode.F) && currentInteractable != null)
+                {
+                    currentInteractable.Interact();
+                }
+
+                Move();
+            }
+        }
+
+        	
     }
 	
 	void Move()
