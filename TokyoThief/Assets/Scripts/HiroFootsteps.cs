@@ -21,6 +21,6 @@ private AudioSource hiro;
 		}
 		if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D)) {
 			hiro.Stop();
-		}
+		} //makes it stop if u hit a movement button and then hit another while holding the first down still. weird.
     }
 }
