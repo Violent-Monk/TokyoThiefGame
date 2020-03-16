@@ -10,9 +10,6 @@ public class GameOverMenu : MonoBehaviour
 
     public GameObject gameOverMenuUI;
 
-    bool gameHasEnded = false; //used by restart button
-
-
     public void ResetGame()
     {
         gameOverMenuUI.SetActive(false);
