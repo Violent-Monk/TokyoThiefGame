@@ -8,7 +8,10 @@ public class GameOverMenu : MonoBehaviour
 
     public static bool GameIsPaused = false;
 
-    public GameObject pauseMenuUI;
+    public GameObject gameOverMenuUI;
+
+    bool gameHasEnded = false; //used by restart button
+
 
     // Update is called once per frame
     void Update()
@@ -17,7 +20,7 @@ public class GameOverMenu : MonoBehaviour
         {
             if (GameIsPaused)
             {
-                Restart();
+                ResetGame();
             }
             else
             {
@@ -26,17 +29,16 @@ public class GameOverMenu : MonoBehaviour
         }
     }
 
-    public void Restart()
+    public void ResetGame()
     {
-        pauseMenuUI.SetActive(false);
+        gameOverMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        Invoke("Restart", 0f);
     }
 
     void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        gameOverMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
@@ -52,6 +54,7 @@ public class GameOverMenu : MonoBehaviour
         Debug.Log("Quitting Game...");
         Application.Quit();
     }
+
 
 }
 
