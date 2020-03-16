@@ -34,6 +34,7 @@ public class GameOverMenu : MonoBehaviour
         gameOverMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        FindObjectOfType<GameManager>().EndGame();
     }
 
     void Pause()
