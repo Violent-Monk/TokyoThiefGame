@@ -8,7 +8,7 @@ public class CharControls : MonoBehaviour
     [SerializeField]
     float moveSpeed = 4f;
     float runSpeed = 8f;
-    float crouchSpeed = 2f;
+    float crouchSpeed = 3f;
 
     float horzMovement = 0;
     float vertMovement = 0;
@@ -142,17 +142,17 @@ public class CharControls : MonoBehaviour
         {
             if (isCrouched == false)
             {
-                transform.localScale -= new Vector3(0, 0.5F, 0);
+                controller.height = controller.height / 2;
                 isCrouched = true;
                 moveSpeed = crouchSpeed;
-                controller.center = new Vector3(0, 0.8f, 0);
+                controller.center = new Vector3(0, 0.75f, 0);
             }
             else
             {
-                transform.localScale -= new Vector3(0, -0.5F, 0);
+                controller.center = new Vector3(0, 2.4f, 0);
+                controller.height = controller.height * 2;
                 isCrouched = false;
-                moveSpeed = runSpeed;
-                controller.center = new Vector3(0, 0.15f, 0);
+                moveSpeed = runSpeed;             
             }
         }
 
