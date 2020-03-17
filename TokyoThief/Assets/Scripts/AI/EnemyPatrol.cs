@@ -17,10 +17,14 @@ public class EnemyPatrol : MonoBehaviour
 
     public bool random;
 
+    private bool investigating;
+
     // Start is called before the first frame update
     void Start()
     {
         waitTime = startWaitTime;
+
+        investigating = false;
 
         if(random)
         {
@@ -39,31 +43,42 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, moveSpots[nextSpot].position, speed * Time.deltaTime);
-        transform.LookAt(moveSpots[nextSpot].position);
-        animator.SetFloat("Direction", transform.rotation.eulerAngles.y);
+        if(!(investigating)){
+	        transform.position = Vector3.MoveTowards(transform.position, moveSpots[nextSpot].position, speed * Time.deltaTime);
+	        transform.LookAt(moveSpots[nextSpot].position);
+	        animator.SetFloat("Direction", transform.rotation.eulerAngles.y);
 
-        if (Vector3.Distance(transform.position, moveSpots[nextSpot].position) < 0.2f)
-        {
-            if(waitTime <= 0){
-                if (random)
-                {
-                    nextSpot = Random.Range(0, moveSpots.Length);
-                }
-                else if (nextSpot == moveSpots.Length - 1)
-                {
-                    nextSpot = 0;
-                }
-                else
-                {
-                    nextSpot++;
-                }
-                waitTime = startWaitTime;
-                animator.SetBool("Idle", false);
-            } else {
-                waitTime -= Time.deltaTime;
-                animator.SetBool("Idle", true);
-            }
-        }
+	        if (Vector3.Distance(transform.position, moveSpots[nextSpot].position) < 0.2f)
+	        {
+	            if(waitTime <= 0){
+	                if (random)
+	                {
+	                    nextSpot = Random.Range(0, moveSpots.Length);
+	                }
+	                else if (nextSpot == moveSpots.Length - 1)
+	                {
+	                    nextSpot = 0;
+	                }
+	                else
+	                {
+	                    nextSpot++;
+	                }
+	                waitTime = startWaitTime;
+	                animator.SetBool("Idle", false);
+	            } else {
+	                waitTime -= Time.deltaTime;
+	                animator.SetBool("Idle", true);
+	            }
+	        }
+	    }
+    }
+
+   public void investigate(Transform location){
+    	investigating = true;
+    	transform.position = Vector3.MoveTowards(transform.position, location.position, speed * Time.deltaTime);
+    	transform.LookAt(location.position);
+        //animator.SetFloat("Direction", transform.rotation.eulerAngles.y);
+    	investigating = false;
+
     }
 }
