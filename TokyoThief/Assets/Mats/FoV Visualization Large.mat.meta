@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:TokyoThief/Assets/Mats/FoV Visualization Large.mat.meta
 guid: d813972c95f23bf41b5ffa847ddfb578
 NativeFormatImporter:
+=======
+guid: b19fc7c28f3dd584aaf25983890dc4ee
+folderAsset: yes
+DefaultImporter:
+>>>>>>> d3609cbee48681d06023e89fc895a4dd5f0d0b46:TokyoThief/Assets/SFX.meta
   externalObjects: {}
   mainObjectFileID: 0
   userData: 
