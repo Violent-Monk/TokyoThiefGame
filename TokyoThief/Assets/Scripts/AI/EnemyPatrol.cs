@@ -43,7 +43,7 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!(investigating)){
+        if(!investigating){
 	        transform.position = Vector3.MoveTowards(transform.position, moveSpots[nextSpot].position, speed * Time.deltaTime);
 	        transform.LookAt(moveSpots[nextSpot].position);
 	        animator.SetFloat("Direction", transform.rotation.eulerAngles.y);
@@ -75,9 +75,13 @@ public class EnemyPatrol : MonoBehaviour
 
    public void investigate(Transform location){
     	investigating = true;
+    	animator.SetBool("Idle", false);
+    	nextSpot = 0;
     	transform.position = Vector3.MoveTowards(transform.position, location.position, speed * Time.deltaTime);
-    	transform.LookAt(location.position);
-        //animator.SetFloat("Direction", transform.rotation.eulerAngles.y);
+        transform.LookAt(location.position);
+        animator.SetFloat("Direction", transform.rotation.eulerAngles.y);
+
+        // 
     	investigating = false;
 
     }
