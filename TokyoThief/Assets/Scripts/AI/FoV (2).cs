@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoV : MonoBehaviour
+public class FoV2 : MonoBehaviour
 {
     public float viewRadius;
     [Range(0,360)]
@@ -17,8 +17,6 @@ public class FoV : MonoBehaviour
     public float meshResolution;
     public int edgeResolveIterations;
     public float edgeDstThreshold;
-
-    public Animator stateAnimator; // this guard's state animator
 
     public MeshFilter viewMeshFilter;
     Mesh viewMesh;
@@ -77,7 +75,6 @@ public class FoV : MonoBehaviour
                     // we have line of sight
                     visibleTargets.Add(target);
                     fovMat.SetColor("_Color", colorAlert);
-                    stateAnimator.SetBool("Alert", true);
                     FindObjectOfType<GameManager>().EndGame(false);
                 }
             }
