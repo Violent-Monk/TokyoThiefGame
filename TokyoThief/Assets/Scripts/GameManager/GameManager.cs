@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        menu = GetComponent<GameOverMenu>();
+        GetComponentInChildren<GameOverMenu>();
+        menu = (GameObject.Find("GameOverCanvas")).GetComponentInChildren<GameOverMenu>();
     }
 
     public void EndGame(bool delay)

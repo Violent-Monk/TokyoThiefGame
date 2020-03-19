@@ -8,7 +8,12 @@ public class GameOverMenu : MonoBehaviour
 
     public static bool GameIsPaused = false;
 
-    public GameObject gameOverMenuUI;
+    GameObject gameOverMenuUI;
+
+    private void Start()
+    {
+        gameOverMenuUI = transform.GetChild(0).gameObject;   
+    }
 
     public void ResetGame()
     {

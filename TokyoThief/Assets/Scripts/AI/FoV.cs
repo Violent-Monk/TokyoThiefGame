@@ -75,12 +75,7 @@ public class FoV : MonoBehaviour
                     // we have line of sight
                     visibleTargets.Add(target);
                     fovMat.SetColor("_Color", colorAlert);
-<<<<<<< HEAD
-                    FindObjectOfType<GameManager>().EndGame();
-                    //Set a reference to the patrol script 
-=======
-                    FindObjectOfType<GameManager>().EndGame(true);
->>>>>>> d3609cbee48681d06023e89fc895a4dd5f0d0b46
+                    FindObjectOfType<GameManager>().EndGame(false);
                 }
             }
         }
