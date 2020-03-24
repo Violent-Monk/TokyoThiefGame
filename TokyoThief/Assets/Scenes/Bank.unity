@@ -15372,7 +15372,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 8666365488836504961, guid: 867353a7205fe9648bed3e9457731621,
+=======
+    - target: {fileID: 7752784240053490041, guid: d7deb4ab3a8e37b44bdb8daf1df221b4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7752784240053490043, guid: d7deb4ab3a8e37b44bdb8daf1df221b4,
+>>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.460003
@@ -17222,8 +17231,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160939456323040129, guid: ef4eccd18d5806347925242b440e70c6,
         type: 3}
+<<<<<<< Updated upstream
       propertyPath: m_Size.z
       value: 3.4068937
+=======
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874003630595643737, guid: 8f210ab2e3a3b4245b99a02d09d6ca28,
+        type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874003630595643737, guid: 8f210ab2e3a3b4245b99a02d09d6ca28,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75c1fbb7ce98585419e4575812781be0, type: 2}
+    - target: {fileID: 8293084795733193779, guid: 8f210ab2e3a3b4245b99a02d09d6ca28,
+        type: 3}
+      propertyPath: m_Height
+      value: 6.06
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8160939456323040129, guid: ef4eccd18d5806347925242b440e70c6,
         type: 3}
