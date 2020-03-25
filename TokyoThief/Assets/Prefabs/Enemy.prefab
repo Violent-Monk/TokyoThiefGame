@@ -150,7 +150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 594467194781549190}
-  - component: {fileID: 594467194781549189}
+  - component: {fileID: 1005733520}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -165,7 +165,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594467194781549188}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.25, y: 3.3000002, z: -2.41}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
@@ -176,7 +176,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &594467194781549189
+--- !u!114 &1005733520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,9 +188,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c626798568e40ad478e12cb0dcd9be3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 5
   startWaitTime: 0
-  moveSpots: []
+  moveSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   animator: {fileID: 594467194501411885}
   stateAnimator: {fileID: 7796605357447135284}
   random: 0
@@ -633,7 +648,7 @@ MonoBehaviour:
   edgeResolveIterations: 5
   edgeDstThreshold: 4
   viewMeshFilterLarge: {fileID: 3040416238684062410}
-  enemyPatrol: {fileID: 0}
+  enemyPatrol: {fileID: 1005733520}
 --- !u!1 &5749157103659203030
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,7 +848,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e61eb9351d0547a45a75905cc2d4b863, type: 2}
+  - {fileID: 2100000, guid: 8ba7fe16bd0dabd47b740dc6d836c9c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -152,13 +152,15 @@ public class CharControls : MonoBehaviour
                 isCrouched = true;
                 moveSpeed = crouchSpeed;
                 controller.center = new Vector3(0, 0.75f, 0);
+                animator.SetBool("Crawling", true);
             }
             else
             {
                 controller.center = new Vector3(0, 2.4f, 0);
                 controller.height = controller.height * 2;
                 isCrouched = false;
-                moveSpeed = runSpeed;             
+                moveSpeed = runSpeed;
+                animator.SetBool("Crawling", false);
             }
         }
 
