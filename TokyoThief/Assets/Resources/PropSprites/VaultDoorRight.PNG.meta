@@ -1,13 +1,34 @@
 fileFormatVersion: 2
-guid: 767b84589e52f234586b62bab47dd872
+guid: e6ba1c09eb6e0ad4388c1bba102f287b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8234536430552275792
-    second: door2_0
+      213: 2856678477577899808
+    second: VaultDoorRight_0
   - first:
-      213: 3582750147135297602
-    second: door2_1
+      213: 5637889564839524073
+    second: VaultDoorRight_1
+  - first:
+      213: -8117538199955687947
+    second: VaultDoorRight_0
+  - first:
+      213: 9075045801251240718
+    second: VaultDoorRight_1
+  - first:
+      213: -1919450940705567730
+    second: VaultDoorRight_2
+  - first:
+      213: 4806481515930813868
+    second: VaultDoorRight_3
+  - first:
+      213: -1758385100276992996
+    second: VaultDoorRight_4
+  - first:
+      213: -8577329373837005222
+    second: VaultDoorRight_5
+  - first:
+      213: 2141066128391456111
+    second: VaultDoorRight_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door2_0
+      name: VaultDoorRight_1
       rect:
         serializedVersion: 2
-        x: 1149
-        y: 273
-        width: 216
-        height: 623
+        x: 809
+        y: 549
+        width: 91
+        height: 669
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b42beeaebc09bd80800000000000000
-      internalID: -8234536430552275792
+      spriteID: e0bfaf7131a01fd70800000000000000
+      internalID: 9075045801251240718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door2_1
+      name: VaultDoorRight_2
       rect:
         serializedVersion: 2
-        x: 1362
-        y: 386
-        width: 202
-        height: 621
+        x: 900
+        y: 588
+        width: 150
+        height: 715
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +160,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2485afec64c78b130800000000000000
-      internalID: 3582750147135297602
+      spriteID: e0c84730a8dbc55e0800000000000000
+      internalID: -1919450940705567730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultDoorRight_3
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 673
+        width: 150
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca58980197d04b240800000000000000
+      internalID: 4806481515930813868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultDoorRight_4
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 758
+        width: 150
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1476af4116f897e0800000000000000
+      internalID: -1758385100276992996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultDoorRight_5
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 844
+        width: 150
+        height: 709
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5eebee016437f880800000000000000
+      internalID: -8577329373837005222
       vertices: []
       indices: 
       edges: []

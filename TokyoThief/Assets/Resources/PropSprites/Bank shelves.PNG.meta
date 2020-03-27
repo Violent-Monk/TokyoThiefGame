@@ -1,7 +1,739 @@
 fileFormatVersion: 2
 guid: 50774cc0b7f212e4f85ae6dc80e954e8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4486590901761297785
+    second: Bank shelves_0
+  - first:
+      213: -1864273149587654588
+    second: Bank shelves_1
+  - first:
+      213: 5947467894259222199
+    second: Bank shelves_2
+  - first:
+      213: 8622426114464176957
+    second: Bank shelves_3
+  - first:
+      213: -549385911692877640
+    second: Bank shelves_4
+  - first:
+      213: 1037945346067954043
+    second: Bank shelves_5
+  - first:
+      213: -6624365546674697185
+    second: Bank shelves_6
+  - first:
+      213: 2897573530731286376
+    second: Bank shelves_7
+  - first:
+      213: 2612366010239775323
+    second: Bank shelves_8
+  - first:
+      213: 5697834970285147063
+    second: Bank shelves_9
+  - first:
+      213: 1399638934180471699
+    second: Bank shelves_10
+  - first:
+      213: 3382806255389537458
+    second: Bank shelves_11
+  - first:
+      213: 7601518450812982782
+    second: Bank shelves_12
+  - first:
+      213: -4719759799467490599
+    second: Bank shelves_13
+  - first:
+      213: 60924757263359616
+    second: Bank shelves_14
+  - first:
+      213: 7824074179927744956
+    second: Bank shelves_15
+  - first:
+      213: 1370066762608517326
+    second: Bank shelves_16
+  - first:
+      213: 5446084224513567906
+    second: Bank shelves_17
+  - first:
+      213: 2033762000128791461
+    second: Bank shelves_18
+  - first:
+      213: -4788406726242687888
+    second: Bank shelves_19
+  - first:
+      213: 3140971734745123375
+    second: Bank shelves_20
+  - first:
+      213: 3481781514063863066
+    second: Bank shelves_21
+  - first:
+      213: -324286131143509911
+    second: Bank shelves_22
+  - first:
+      213: -3845438315465068190
+    second: Bank shelves_23
+  - first:
+      213: -3666774989772458769
+    second: Bank shelves_24
+  - first:
+      213: -3243411383180527307
+    second: Bank shelves_25
+  - first:
+      213: 318654508108338321
+    second: Bank shelves_26
+  - first:
+      213: 272007486116599260
+    second: Bank shelves_27
+  - first:
+      213: 8094997949385078766
+    second: Bank shelves_28
+  - first:
+      213: -900334362951083950
+    second: Bank shelves_29
+  - first:
+      213: -1345449230723121192
+    second: Bank shelves_30
+  - first:
+      213: -5031230885166993397
+    second: Bank shelves_31
+  - first:
+      213: 5061772204094092113
+    second: Bank shelves_32
+  - first:
+      213: -8764322497003700851
+    second: Bank shelves_33
+  - first:
+      213: 1625808419256059940
+    second: Bank shelves_34
+  - first:
+      213: 7095074319991295947
+    second: Bank shelves_35
+  - first:
+      213: -4139366958364969142
+    second: Bank shelves_36
+  - first:
+      213: 7587798891126510622
+    second: Bank shelves_37
+  - first:
+      213: -2110977929621875269
+    second: Bank shelves_38
+  - first:
+      213: -3264717803224875440
+    second: Bank shelves_39
+  - first:
+      213: 8617480407204572128
+    second: Bank shelves_40
+  - first:
+      213: -8055006541320193841
+    second: Bank shelves_41
+  - first:
+      213: 4820850849885541507
+    second: Bank shelves_42
+  - first:
+      213: 5294697778802308375
+    second: Bank shelves_43
+  - first:
+      213: -1211710721078524899
+    second: Bank shelves_44
+  - first:
+      213: 5631254849182908554
+    second: Bank shelves_45
+  - first:
+      213: -1990480179073443189
+    second: Bank shelves_46
+  - first:
+      213: -5250319191364513760
+    second: Bank shelves_47
+  - first:
+      213: 4063554514432080092
+    second: Bank shelves_48
+  - first:
+      213: 5592875617415955594
+    second: Bank shelves_49
+  - first:
+      213: -1396108461597888546
+    second: Bank shelves_50
+  - first:
+      213: -8379272910763634999
+    second: Bank shelves_51
+  - first:
+      213: 904674693353228289
+    second: Bank shelves_52
+  - first:
+      213: -1488983805552185798
+    second: Bank shelves_53
+  - first:
+      213: -4241276315089071282
+    second: Bank shelves_54
+  - first:
+      213: -7644733769296606627
+    second: Bank shelves_55
+  - first:
+      213: -8412573969005244840
+    second: Bank shelves_56
+  - first:
+      213: 2555235754827538888
+    second: Bank shelves_57
+  - first:
+      213: -3498425353075891432
+    second: Bank shelves_58
+  - first:
+      213: 8893680806469728045
+    second: Bank shelves_59
+  - first:
+      213: -3092348178162078314
+    second: Bank shelves_60
+  - first:
+      213: 8467531902394244419
+    second: Bank shelves_61
+  - first:
+      213: -7173745953772650356
+    second: Bank shelves_62
+  - first:
+      213: 8202090932540269012
+    second: Bank shelves_63
+  - first:
+      213: 7249941047051633638
+    second: Bank shelves_64
+  - first:
+      213: 3762950649418444672
+    second: Bank shelves_65
+  - first:
+      213: -5367119649484885630
+    second: Bank shelves_66
+  - first:
+      213: 9192301562854469054
+    second: Bank shelves_67
+  - first:
+      213: -2792628248705502568
+    second: Bank shelves_68
+  - first:
+      213: -6381165885632219772
+    second: Bank shelves_69
+  - first:
+      213: -1539546277632115486
+    second: Bank shelves_70
+  - first:
+      213: 7797761673016895964
+    second: Bank shelves_71
+  - first:
+      213: 7533618554443656261
+    second: Bank shelves_72
+  - first:
+      213: -6727268128670465674
+    second: Bank shelves_73
+  - first:
+      213: 4087845893145583002
+    second: Bank shelves_74
+  - first:
+      213: 7763388241937258111
+    second: Bank shelves_75
+  - first:
+      213: 4812683617703082505
+    second: Bank shelves_76
+  - first:
+      213: -7193143561586177746
+    second: Bank shelves_77
+  - first:
+      213: 5317581780363478800
+    second: Bank shelves_78
+  - first:
+      213: 1857169849409528125
+    second: Bank shelves_79
+  - first:
+      213: -3972425310503055015
+    second: Bank shelves_80
+  - first:
+      213: 8009560902040109007
+    second: Bank shelves_81
+  - first:
+      213: 228656241394605100
+    second: Bank shelves_82
+  - first:
+      213: -572279446023493553
+    second: Bank shelves_83
+  - first:
+      213: 7448291628725761992
+    second: Bank shelves_84
+  - first:
+      213: 5071676684541394349
+    second: Bank shelves_85
+  - first:
+      213: 4611437391936913119
+    second: Bank shelves_86
+  - first:
+      213: 1158904427165978999
+    second: Bank shelves_87
+  - first:
+      213: -5281688507811245626
+    second: Bank shelves_88
+  - first:
+      213: 4337774221131526153
+    second: Bank shelves_89
+  - first:
+      213: 106685463663083244
+    second: Bank shelves_90
+  - first:
+      213: 9206634519926728530
+    second: Bank shelves_91
+  - first:
+      213: -48525213987773520
+    second: Bank shelves_92
+  - first:
+      213: -5940778354514714451
+    second: Bank shelves_93
+  - first:
+      213: 3599600722153915084
+    second: Bank shelves_94
+  - first:
+      213: -7499711538838036608
+    second: Bank shelves_95
+  - first:
+      213: 5468479335270334351
+    second: Bank shelves_96
+  - first:
+      213: 3001377237401418058
+    second: Bank shelves_97
+  - first:
+      213: 3723515686936804563
+    second: Bank shelves_98
+  - first:
+      213: -3871070160728710656
+    second: Bank shelves_99
+  - first:
+      213: 6290552704363473786
+    second: Bank shelves_100
+  - first:
+      213: -4409443688806459290
+    second: Bank shelves_101
+  - first:
+      213: 5759409259014938464
+    second: Bank shelves_102
+  - first:
+      213: -2885932330332659261
+    second: Bank shelves_103
+  - first:
+      213: -1221978847949355278
+    second: Bank shelves_104
+  - first:
+      213: -9085314295964648078
+    second: Bank shelves_105
+  - first:
+      213: -8536936031263085154
+    second: Bank shelves_106
+  - first:
+      213: 2109387557948805727
+    second: Bank shelves_107
+  - first:
+      213: -6357539787149830514
+    second: Bank shelves_108
+  - first:
+      213: -6167509182700443417
+    second: Bank shelves_109
+  - first:
+      213: -1027409235686619238
+    second: Bank shelves_110
+  - first:
+      213: -3848289969953507004
+    second: Bank shelves_111
+  - first:
+      213: 6659431975284884386
+    second: Bank shelves_112
+  - first:
+      213: -2817780963503585277
+    second: Bank shelves_113
+  - first:
+      213: -3931962495169870489
+    second: Bank shelves_114
+  - first:
+      213: 8148520942380291466
+    second: Bank shelves_115
+  - first:
+      213: 5400061745370920404
+    second: Bank shelves_116
+  - first:
+      213: 8573981920717276909
+    second: Bank shelves_117
+  - first:
+      213: 6578939749511112565
+    second: Bank shelves_118
+  - first:
+      213: 7458476206277131597
+    second: Bank shelves_119
+  - first:
+      213: -4040716469790566209
+    second: Bank shelves_120
+  - first:
+      213: 995972117959865855
+    second: Bank shelves_121
+  - first:
+      213: 3256937931981148760
+    second: Bank shelves_122
+  - first:
+      213: -4017271493141446977
+    second: Bank shelves_123
+  - first:
+      213: 5347763349734470570
+    second: Bank shelves_124
+  - first:
+      213: 7863198991482119908
+    second: Bank shelves_125
+  - first:
+      213: -9093123709505766214
+    second: Bank shelves_126
+  - first:
+      213: 2505101190833331289
+    second: Bank shelves_127
+  - first:
+      213: 7528372671637039363
+    second: Bank shelves_128
+  - first:
+      213: 4670275853127140985
+    second: Bank shelves_129
+  - first:
+      213: -2363494214269514407
+    second: Bank shelves_130
+  - first:
+      213: -5722331480084005281
+    second: Bank shelves_131
+  - first:
+      213: -6722239039147197115
+    second: Bank shelves_132
+  - first:
+      213: -6171883122386277642
+    second: Bank shelves_133
+  - first:
+      213: 8364073943358429721
+    second: Bank shelves_134
+  - first:
+      213: 8902516737777791726
+    second: Bank shelves_135
+  - first:
+      213: -2779072122783570349
+    second: Bank shelves_136
+  - first:
+      213: 4222330853146192392
+    second: Bank shelves_137
+  - first:
+      213: -7118518295026175310
+    second: Bank shelves_138
+  - first:
+      213: -2070592301946147693
+    second: Bank shelves_139
+  - first:
+      213: -3843922881411472404
+    second: Bank shelves_140
+  - first:
+      213: 1560702728225174058
+    second: Bank shelves_141
+  - first:
+      213: -3269218215850346968
+    second: Bank shelves_142
+  - first:
+      213: -2937046528976430136
+    second: Bank shelves_143
+  - first:
+      213: -5811935220387093987
+    second: Bank shelves_144
+  - first:
+      213: -7940192906275242416
+    second: Bank shelves_145
+  - first:
+      213: 2621622355557568119
+    second: Bank shelves_146
+  - first:
+      213: 2517504812349449327
+    second: Bank shelves_147
+  - first:
+      213: 1273259886177886942
+    second: Bank shelves_148
+  - first:
+      213: -5092539031752307087
+    second: Bank shelves_149
+  - first:
+      213: 7257983789714048545
+    second: Bank shelves_150
+  - first:
+      213: 3653482069098966009
+    second: Bank shelves_151
+  - first:
+      213: -152132521960403554
+    second: Bank shelves_152
+  - first:
+      213: -1012130676398625122
+    second: Bank shelves_153
+  - first:
+      213: -5172110124147343804
+    second: Bank shelves_154
+  - first:
+      213: 5476421258345112903
+    second: Bank shelves_155
+  - first:
+      213: 6435827654149392426
+    second: Bank shelves_156
+  - first:
+      213: 8399341286919404108
+    second: Bank shelves_157
+  - first:
+      213: -1111106148396556528
+    second: Bank shelves_158
+  - first:
+      213: 8500251162957935206
+    second: Bank shelves_159
+  - first:
+      213: 7355657620497379363
+    second: Bank shelves_160
+  - first:
+      213: -4343637952005706606
+    second: Bank shelves_161
+  - first:
+      213: 4004729366325106391
+    second: Bank shelves_162
+  - first:
+      213: 3412458373388290699
+    second: Bank shelves_163
+  - first:
+      213: -6195979682084457628
+    second: Bank shelves_164
+  - first:
+      213: 3501381069278994626
+    second: Bank shelves_165
+  - first:
+      213: 1993724466369049904
+    second: Bank shelves_166
+  - first:
+      213: 6539417956333384306
+    second: Bank shelves_167
+  - first:
+      213: -937536978481411926
+    second: Bank shelves_168
+  - first:
+      213: -5163597568936341388
+    second: Bank shelves_169
+  - first:
+      213: -4649091286718379994
+    second: Bank shelves_170
+  - first:
+      213: -8181788628752682746
+    second: Bank shelves_171
+  - first:
+      213: 6796990663133620903
+    second: Bank shelves_172
+  - first:
+      213: -2128543811407715788
+    second: Bank shelves_173
+  - first:
+      213: 6350204279034649004
+    second: Bank shelves_174
+  - first:
+      213: -8191969298485145029
+    second: Bank shelves_175
+  - first:
+      213: 323620358683227319
+    second: Bank shelves_176
+  - first:
+      213: 8248876741479696560
+    second: Bank shelves_177
+  - first:
+      213: -3806621933614592821
+    second: Bank shelves_178
+  - first:
+      213: -6325407674232872548
+    second: Bank shelves_179
+  - first:
+      213: -8100542814652932707
+    second: Bank shelves_180
+  - first:
+      213: -5096485274962685984
+    second: Bank shelves_181
+  - first:
+      213: -4434680322228496337
+    second: Bank shelves_182
+  - first:
+      213: 6927912304868554188
+    second: Bank shelves_183
+  - first:
+      213: -170567536832946063
+    second: Bank shelves_184
+  - first:
+      213: 4998819164318274200
+    second: Bank shelves_185
+  - first:
+      213: -428544856598497020
+    second: Bank shelves_186
+  - first:
+      213: -8667947121010268086
+    second: Bank shelves_187
+  - first:
+      213: 5874731953884798460
+    second: Bank shelves_188
+  - first:
+      213: -3362100672448969302
+    second: Bank shelves_189
+  - first:
+      213: -7430575294655358743
+    second: Bank shelves_190
+  - first:
+      213: -853061115558079551
+    second: Bank shelves_191
+  - first:
+      213: 8688468541331655843
+    second: Bank shelves_192
+  - first:
+      213: -719598897107130184
+    second: Bank shelves_193
+  - first:
+      213: 1708339247401798403
+    second: Bank shelves_194
+  - first:
+      213: -3475757071993489891
+    second: Bank shelves_195
+  - first:
+      213: -4619118264876444655
+    second: Bank shelves_196
+  - first:
+      213: -8089820718724003385
+    second: Bank shelves_197
+  - first:
+      213: -5176003366570492504
+    second: Bank shelves_198
+  - first:
+      213: 1560503250802308158
+    second: Bank shelves_199
+  - first:
+      213: 2510717900232768200
+    second: Bank shelves_200
+  - first:
+      213: 6397389353396706955
+    second: Bank shelves_201
+  - first:
+      213: -9031209440589026195
+    second: Bank shelves_202
+  - first:
+      213: -9048548463353561922
+    second: Bank shelves_203
+  - first:
+      213: -5239655531191659144
+    second: Bank shelves_204
+  - first:
+      213: 7655076131574359053
+    second: Bank shelves_205
+  - first:
+      213: -5567252709381603656
+    second: Bank shelves_206
+  - first:
+      213: -162366588222509102
+    second: Bank shelves_207
+  - first:
+      213: -2837628892045790038
+    second: Bank shelves_208
+  - first:
+      213: -2492588451629384582
+    second: Bank shelves_209
+  - first:
+      213: 2590462132493999732
+    second: Bank shelves_210
+  - first:
+      213: -749094809337546465
+    second: Bank shelves_211
+  - first:
+      213: 7005114923826780834
+    second: Bank shelves_212
+  - first:
+      213: -8134318983759416
+    second: Bank shelves_213
+  - first:
+      213: -8657344400773907249
+    second: Bank shelves_214
+  - first:
+      213: 7047989682854578893
+    second: Bank shelves_215
+  - first:
+      213: -6302802260954451687
+    second: Bank shelves_216
+  - first:
+      213: 2164594843813813835
+    second: Bank shelves_217
+  - first:
+      213: -2568040359976133228
+    second: Bank shelves_218
+  - first:
+      213: -8948603890865357443
+    second: Bank shelves_219
+  - first:
+      213: 2783770147548132135
+    second: Bank shelves_220
+  - first:
+      213: 2762692709912222853
+    second: Bank shelves_221
+  - first:
+      213: -8446532368772355414
+    second: Bank shelves_222
+  - first:
+      213: 4160288948814587645
+    second: Bank shelves_223
+  - first:
+      213: -4631722991461459890
+    second: Bank shelves_224
+  - first:
+      213: 3748833128527251079
+    second: Bank shelves_225
+  - first:
+      213: 3845010104190348214
+    second: Bank shelves_226
+  - first:
+      213: 4672513306303590680
+    second: Bank shelves_227
+  - first:
+      213: 4063858130167174312
+    second: Bank shelves_228
+  - first:
+      213: -2511907839622384913
+    second: Bank shelves_229
+  - first:
+      213: 669682505193630560
+    second: Bank shelves_230
+  - first:
+      213: -6073872909939283994
+    second: Bank shelves_231
+  - first:
+      213: 36230008333411217
+    second: Bank shelves_232
+  - first:
+      213: -7714801128399464258
+    second: Bank shelves_233
+  - first:
+      213: 3832425517266114727
+    second: Bank shelves_234
+  - first:
+      213: 8232122687137109818
+    second: Bank shelves_235
+  - first:
+      213: -831624460850055663
+    second: Bank shelves_236
+  - first:
+      213: 5194806139389041488
+    second: Bank shelves_237
+  - first:
+      213: 3634102813137634868
+    second: Bank shelves_238
+  - first:
+      213: 8432655511664804442
+    second: Bank shelves_239
+  - first:
+      213: -5300731810773369110
+    second: Bank shelves_240
+  - first:
+      213: -2805276907154819625
+    second: Bank shelves_241
+  - first:
+      213: 9142175267783646399
+    second: Bank shelves_242
+  - first:
+      213: -7827845400322518957
+    second: Bank shelves_243
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +772,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 140
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +828,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Bank shelves_1
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 351
+        width: 253
+        height: 1311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4487782a275c026e0800000000000000
+      internalID: -1864273149587654588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bank shelves_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 293
+        width: 256
+        height: 1517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b68c5ee986a98250800000000000000
+      internalID: 5947467894259222199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bank shelves_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 382
+        width: 256
+        height: 1576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b50b61ed209a770800000000000000
+      internalID: 8622426114464176957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bank shelves_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 530
+        width: 256
+        height: 1519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b021f09c603068f0800000000000000
+      internalID: -549385911692877640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bank shelves_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 678
+        width: 232
+        height: 1288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7976a00bc5876e00800000000000000
+      internalID: 1037945346067954043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

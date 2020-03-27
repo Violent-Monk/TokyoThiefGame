@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public bool gameHasEnded = false;
     public float restartDelay = 1f;
     GameOverMenu menu;
+    
 
     private void Start()
     {

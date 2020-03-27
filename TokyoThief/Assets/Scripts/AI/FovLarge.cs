@@ -22,7 +22,7 @@ public class FovLarge : MonoBehaviour
     Mesh viewMeshLarge;
 
     Material fovMat;
-    Color colorAlert = Color.green;
+    Color colorAlert = new Color(1f, 0.5f, 0f);
     Color colorGuarding;
 
     public EnemyPatrol enemyPatrol;

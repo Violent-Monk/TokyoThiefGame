@@ -26,6 +26,8 @@ public class EnemyPatrol : MonoBehaviour
     public Transform investLoc;
     bool investStarted;
 
+    FoV fov;
+
     Vector3 nextLoc;
 
     // Start is called before the first frame update
@@ -33,6 +35,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         waitTime = startWaitTime;
         cam = GameObject.Find("CameraObject").transform;
+        fov = GetComponentInChildren<FoV>();
 
         investLoc = null;
         waiting = false;
@@ -119,6 +122,7 @@ public class EnemyPatrol : MonoBehaviour
     void investigate()
     {
         transform.position = Vector3.MoveTowards(transform.position, nextLoc, speed * Time.deltaTime);
+        fov.viewAngle = 200;
         transform.LookAt(nextLoc);
         animator.SetFloat("Direction", Mathf.Repeat(transform.rotation.eulerAngles.y - cam.rotation.eulerAngles.y, 360));
 
@@ -131,6 +135,7 @@ public class EnemyPatrol : MonoBehaviour
                 stateAnimator.SetBool("Caution", false);
                 investigating = false;
                 investStarted = false;
+                fov.viewAngle = 70;
             }
             else
             {

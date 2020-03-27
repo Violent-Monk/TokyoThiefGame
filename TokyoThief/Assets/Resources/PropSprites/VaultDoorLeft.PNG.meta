@@ -1,0 +1,448 @@
+fileFormatVersion: 2
+guid: b99e61217d86e6b4eb8164bc19cee799
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3371917517546534195
+    second: VaultDoorLeft_0
+  - first:
+      213: -7440234702789962075
+    second: VaultDoorLeft_1
+  - first:
+      213: 751771262317920455
+    second: VaultDoorLeft_0
+  - first:
+      213: 381889974648940007
+    second: VaultDoorLeft_1
+  - first:
+      213: -2226097191441119480
+    second: VaultDoorLeft_2
+  - first:
+      213: -7675199207433853636
+    second: VaultDoorLeft_3
+  - first:
+      213: 8433448933909311856
+    second: VaultDoorLeft_4
+  - first:
+      213: -3485538643089899328
+    second: VaultDoorLeft_5
+  - first:
+      213: -7284453542360870980
+    second: VaultDoorLeft_6
+  - first:
+      213: -3176192100972354191
+    second: VaultDoorLeft_7
+  - first:
+      213: -1774515206144884586
+    second: VaultDoorLeft_8
+  - first:
+      213: -6958268673011826659
+    second: VaultDoorLeft_9
+  - first:
+      213: -7141682483254559253
+    second: VaultDoorLeft_10
+  - first:
+      213: 121042596923106636
+    second: VaultDoorLeft_11
+  - first:
+      213: -4932049683098704825
+    second: VaultDoorLeft_12
+  - first:
+      213: 3463683096839420107
+    second: VaultDoorLeft_13
+  - first:
+      213: -2434695030926789832
+    second: VaultDoorLeft_14
+  - first:
+      213: -9047782950349058649
+    second: VaultDoorLeft_15
+  - first:
+      213: -7468519897880818608
+    second: VaultDoorLeft_16
+  - first:
+      213: 2151684197646984454
+    second: VaultDoorLeft_17
+  - first:
+      213: 1187253738439218580
+    second: VaultDoorLeft_18
+  - first:
+      213: 337034767872456906
+    second: VaultDoorLeft_19
+  - first:
+      213: 5407051909416431834
+    second: VaultDoorLeft_20
+  - first:
+      213: -5093715769775550105
+    second: VaultDoorLeft_21
+  - first:
+      213: 2732531983138589384
+    second: VaultDoorLeft_22
+  - first:
+      213: 6441853936374990433
+    second: VaultDoorLeft_23
+  - first:
+      213: -7433910287939308609
+    second: VaultDoorLeft_24
+  - first:
+      213: 7006176004225207848
+    second: VaultDoorLeft_25
+  - first:
+      213: -8348346623800677941
+    second: VaultDoorLeft_26
+  - first:
+      213: 89694538666421639
+    second: VaultDoorLeft_27
+  - first:
+      213: -4088409397677460894
+    second: VaultDoorLeft_28
+  - first:
+      213: -8856740851394717151
+    second: VaultDoorLeft_29
+  - first:
+      213: 9209134100551540165
+    second: VaultDoorLeft_30
+  - first:
+      213: -988669465896324802
+    second: VaultDoorLeft_31
+  - first:
+      213: -7665724922300438818
+    second: VaultDoorLeft_32
+  - first:
+      213: -736254361175569545
+    second: VaultDoorLeft_33
+  - first:
+      213: -601922188655900880
+    second: VaultDoorLeft_34
+  - first:
+      213: 7351377231049638580
+    second: VaultDoorLeft_35
+  - first:
+      213: -1771048499758321160
+    second: VaultDoorLeft_36
+  - first:
+      213: 5632674628458288221
+    second: VaultDoorLeft_37
+  - first:
+      213: 8097129343699505047
+    second: VaultDoorLeft_38
+  - first:
+      213: -4656766700761974901
+    second: VaultDoorLeft_39
+  - first:
+      213: -3373561320245965739
+    second: VaultDoorLeft_40
+  - first:
+      213: 7217410967907963529
+    second: VaultDoorLeft_41
+  - first:
+      213: -3845234071061041459
+    second: VaultDoorLeft_42
+  - first:
+      213: 6650459515989969906
+    second: VaultDoorLeft_43
+  - first:
+      213: 631609845131799938
+    second: VaultDoorLeft_44
+  - first:
+      213: -7500827600764179926
+    second: VaultDoorLeft_45
+  - first:
+      213: 1740075599460703955
+    second: VaultDoorLeft_46
+  - first:
+      213: 4374425806890279512
+    second: VaultDoorLeft_47
+  - first:
+      213: -667307871943220779
+    second: VaultDoorLeft_48
+  - first:
+      213: 8586053742740889999
+    second: VaultDoorLeft_49
+  - first:
+      213: 427003592442998476
+    second: VaultDoorLeft_50
+  - first:
+      213: 3933150973958519614
+    second: VaultDoorLeft_51
+  - first:
+      213: 7614739197572636961
+    second: VaultDoorLeft_52
+  - first:
+      213: -6302999583242293026
+    second: VaultDoorLeft_53
+  - first:
+      213: 177072891324084216
+    second: VaultDoorLeft_54
+  - first:
+      213: 4375241992853427551
+    second: VaultDoorLeft_55
+  - first:
+      213: 226723723627142067
+    second: VaultDoorLeft_56
+  - first:
+      213: -6558353656805348713
+    second: VaultDoorLeft_57
+  - first:
+      213: 2711249960163788575
+    second: VaultDoorLeft_58
+  - first:
+      213: 8370142913145585394
+    second: VaultDoorLeft_59
+  - first:
+      213: 2408480870016883731
+    second: VaultDoorLeft_60
+  - first:
+      213: -3546281390984983579
+    second: VaultDoorLeft_61
+  - first:
+      213: 9196460393936985698
+    second: VaultDoorLeft_62
+  - first:
+      213: 8813252103408804544
+    second: VaultDoorLeft_63
+  - first:
+      213: -3068020791945122306
+    second: VaultDoorLeft_64
+  - first:
+      213: 1396826886646602268
+    second: VaultDoorLeft_65
+  - first:
+      213: -7277772915958226180
+    second: VaultDoorLeft_66
+  - first:
+      213: -5510580770836651584
+    second: VaultDoorLeft_67
+  - first:
+      213: -208310995408941711
+    second: VaultDoorLeft_68
+  - first:
+      213: -1151220898345731239
+    second: VaultDoorLeft_69
+  - first:
+      213: -7841019240678798913
+    second: VaultDoorLeft_70
+  - first:
+      213: 1446589243926930983
+    second: VaultDoorLeft_71
+  - first:
+      213: -4836665903477118802
+    second: VaultDoorLeft_72
+  - first:
+      213: 4661192120034319404
+    second: VaultDoorLeft_73
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VaultDoorLeft_0
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 866
+        width: 121
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c08ec2eaf3de6a00800000000000000
+      internalID: 751771262317920455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultDoorLeft_1
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 780
+        width: 150
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5ab3a98eebc4500800000000000000
+      internalID: 381889974648940007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultDoorLeft_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 695
+        width: 150
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80748a416605b11e0800000000000000
+      internalID: -2226097191441119480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultDoorLeft_3
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 610
+        width: 150
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35ab8c5cf63c7590800000000000000
+      internalID: -7675199207433853636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultDoorLeft_4
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 550
+        width: 130
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071bf018f11a90570800000000000000
+      internalID: 8433448933909311856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
