@@ -21,13 +21,15 @@ public class PickUp : MonoBehaviour
         if(isHolding == true){
         	item.GetComponent<Rigidbody>().velocity = Vector3.zero;
         	item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-        	item.transform.position = tempParent.transform.position + new Vector3(0f, 1f, 0f);
+            item.GetComponent<BoxCollider>().enabled = false;
+        	item.transform.position = tempParent.transform.position + new Vector3(0f, 2f, 0f);
 
         	if(Input.GetMouseButtonDown(1)){
                 isHolding = false;
                 item.GetComponent<Rigidbody>().useGravity = true;
                 item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwforce);
-        	}
+                item.GetComponent<BoxCollider>().enabled = true;
+            }
         }else{
         	objectPos = item.transform.position;
         	item.transform.SetParent(null);
