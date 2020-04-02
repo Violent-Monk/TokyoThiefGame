@@ -165,7 +165,7 @@ public class CharControls : MonoBehaviour
         }
 
         //jump
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && isCrouched == false)
         {
             controller.slopeLimit = jumpSlopeLimit;
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);

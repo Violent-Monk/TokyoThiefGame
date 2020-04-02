@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rotateWide : MonoBehaviour
+public class RotateWide : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     Transform cam;
@@ -13,8 +13,6 @@ public class rotateWide : MonoBehaviour
     GameObject spriteSW;
     GameObject spriteNW;
     GameObject currActive;
-    string camDir = "NE";
-    bool swap; // determine if we should change sprites because the camera rotated
 
     // Start is called before the first frame update
     void Start()
@@ -24,68 +22,33 @@ public class rotateWide : MonoBehaviour
         spriteSW = transform.GetChild(5).gameObject;
         spriteNW = transform.GetChild(6).gameObject;
         currActive = spriteNE;
-        cam = GameObject.Find("CameraObject").transform;
-        gameCam = cam.GetComponentInChildren<Camera>();
-        gameCam.transparencySortMode = TransparencySortMode.CustomAxis;
-        gameCam.transparencySortAxis = new Vector3(1f, 0f, 1f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void swap(string camDir)
     {
-        // should probably move this to CamControls
-        if (cam.rotation.eulerAngles.y > 275 || (cam.rotation.eulerAngles.y < 45 && cam.rotation.eulerAngles.y > -2))
+        if (camDir == "SW")
         {
-            swap = (camDir != "NE" ? true : false);
-            camDir = "NE";
-            gameCam.transparencySortAxis = new Vector3(1f, 0f, 1f);
+            currActive.SetActive(false);
+            spriteSW.SetActive(true);
+            currActive = spriteSW;
         }
-        else if (cam.rotation.eulerAngles.y > 1 && cam.rotation.eulerAngles.y < 135)
+        else if (camDir == "SE")
         {
-            swap = (camDir != "SE" ? true : false);
-            camDir = "SE";
-            gameCam.transparencySortAxis = new Vector3(1f, 0f, -1f);
+            currActive.SetActive(false);
+            spriteSE.SetActive(true);
+            currActive = spriteSE;
         }
-        else if (cam.rotation.eulerAngles.y > 135 && cam.rotation.eulerAngles.y < 225)
+        else if (camDir == "NW")
         {
-            swap = (camDir != "SW" ? true : false);
-            camDir = "SW";
-            gameCam.transparencySortAxis = new Vector3(-1f, 0f, -1f);
+            currActive.SetActive(false);
+            spriteNW.SetActive(true);
+            currActive = spriteNW;
         }
-        else
+        else if (camDir == "NE")
         {
-            swap = (camDir != "NW" ? true : false);
-            camDir = "NW";
-            gameCam.transparencySortAxis = new Vector3(-1f, 0f, 1f);
-        }
-
-        if (swap)
-        {         
-            if (camDir == "SW")
-            {
-                currActive.SetActive(false);
-                spriteSW.SetActive(true);
-                currActive = spriteSW;
-            }
-            else if (camDir == "SE")
-            {
-                currActive.SetActive(false);
-                spriteSE.SetActive(true);
-                currActive = spriteSE;
-            }
-            else if (camDir == "NW")
-            {
-                currActive.SetActive(false);
-                spriteNW.SetActive(true);
-                currActive = spriteNW;
-            }
-            else if (camDir == "NE")
-            {
-                currActive.SetActive(false);
-                spriteNE.SetActive(true);
-                currActive = spriteNE;
-            }
+            currActive.SetActive(false);
+            spriteNE.SetActive(true);
+            currActive = spriteNE;
         }
     }
-
 }

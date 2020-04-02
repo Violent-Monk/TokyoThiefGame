@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyPatrol : MonoBehaviour
 
@@ -26,6 +27,8 @@ public class EnemyPatrol : MonoBehaviour
     public Transform investLoc;
     bool investStarted;
 
+    NavMeshAgent agent;
+
     FoV fov;
 
     Vector3 nextLoc;
@@ -36,6 +39,7 @@ public class EnemyPatrol : MonoBehaviour
         waitTime = startWaitTime;
         cam = GameObject.Find("CameraObject").transform;
         fov = GetComponentInChildren<FoV>();
+        agent = GetComponent<NavMeshAgent>();
 
         investLoc = null;
         waiting = false;
@@ -60,21 +64,28 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (agent.isStopped)
+        {
+            animator.SetBool("Idle", true);
+        }
+        else
+        {
+            animator.SetBool("Idle", false);
+        }
         if (investigating == false)
         {
             nextLoc = moveSpots[nextSpot].position;
             patrol();
         }
         else
-        {
+        {          
             stateAnimator.SetBool("Caution", true);
             if (!investStarted) // the guard has just noticed the player
             {
+                agent.isStopped = true;
                 investStarted = true;
                 nextLoc = investLoc.position;
-                nextLoc.y = 3.3f; // stop guards from moving up or down
                 waiting = true;
-                animator.SetBool("Idle", true);
                 StartCoroutine(wait());
             }
             else if (!waiting)
@@ -88,11 +99,16 @@ public class EnemyPatrol : MonoBehaviour
 
     void patrol()
     {
-        transform.position = Vector3.MoveTowards(transform.position, nextLoc, speed * Time.deltaTime);
-        transform.LookAt(nextLoc);
+        //transform.position = Vector3.MoveTowards(transform.position, nextLoc, speed * Time.deltaTime);
+
+        
+            agent.destination = nextLoc;
+            
+        
+        //transform.LookAt(nextLoc);
         animator.SetFloat("Direction", Mathf.Repeat(transform.rotation.eulerAngles.y - cam.rotation.eulerAngles.y, 360));
 
-        if (Vector3.Distance(transform.position, nextLoc) < 0.2f)
+        if (agent.remainingDistance < 0.2f && !agent.pathPending)
         {
             if (waitTime <= 0)
             {
@@ -109,38 +125,44 @@ public class EnemyPatrol : MonoBehaviour
                     nextSpot++;
                 }
                 waitTime = startWaitTime;
-                animator.SetBool("Idle", false);
+                agent.isStopped = false;
             }
             else
             {
+                agent.isStopped = true;
                 waitTime -= Time.deltaTime;
-                animator.SetBool("Idle", true);
             }
         }
     }
 
     void investigate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, nextLoc, speed * Time.deltaTime);
+        // transform.position = Vector3.MoveTowards(transform.position, nextLoc, speed * Time.deltaTime);
+        if (agent.destination != nextLoc)
+        {
+            agent.destination = nextLoc;
+            agent.isStopped = false;
+            agent.autoBraking = true;
+        }   
         fov.viewAngle = 200;
-        transform.LookAt(nextLoc);
         animator.SetFloat("Direction", Mathf.Repeat(transform.rotation.eulerAngles.y - cam.rotation.eulerAngles.y, 360));
 
-        if (transform.position == nextLoc)
+        if (agent.remainingDistance == 0f)
         {
+            agent.isStopped = true;
             if (investTime <= 0)
             {
                 investTime = startInvestTime;
-                animator.SetBool("Idle", false);
+                agent.isStopped = false;
                 stateAnimator.SetBool("Caution", false);
                 investigating = false;
                 investStarted = false;
                 fov.viewAngle = 70;
+                agent.autoBraking = false;
             }
             else
             {
                 investTime -= Time.deltaTime;
-                animator.SetBool("Idle", true);
             }
         }
     }
@@ -149,7 +171,6 @@ public class EnemyPatrol : MonoBehaviour
     {
         // give the player a chance to get away
         yield return new WaitForSeconds(2);
-        animator.SetBool("Idle", false);
         waiting = false;
     }
 }
