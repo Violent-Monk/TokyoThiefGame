@@ -385,6 +385,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &15847955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e816b9ee4a60742af4a087af8ea24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: PickedUpCode
+  satisfied: 1
+  hash: 1020357580
 --- !u!114 &18024660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4421,6 +4436,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d34d31d8c1f53488ad319914352262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!84 &139445824
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 1077
+  m_Height: 907
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 1
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &144877544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5652,41 +5702,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!84 &161899312
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1220
-  m_Height: 907
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 1
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &176636756
 GameObject:
   m_ObjectHideFlags: 0
@@ -10911,6 +10926,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &407848350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffeed126ee6c1488a7228fcfef24c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: HasCodeReaction
+  requiredConditions:
+  - {fileID: 15847955}
+  reactionCollection: {fileID: 1476923602}
 --- !u!1 &409400238
 GameObject:
   m_ObjectHideFlags: 0
@@ -11488,7 +11519,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 1555914306}
+  m_TargetTexture: {fileID: 890183412}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -12914,8 +12945,8 @@ MonoBehaviour:
   autoEnableOutlines: 1
   outlineCamera: {fileID: 449086734}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 1555914306}
-  extraRenderTexture: {fileID: 161899312}
+  renderTexture: {fileID: 890183412}
+  extraRenderTexture: {fileID: 139445824}
 --- !u!1001 &497625440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14234,7 +14265,7 @@ PrefabInstance:
     - target: {fileID: 7245169291895551035, guid: 1c5b760399295ed409133b212666cf1d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45.19
+      value: -49.7
       objectReference: {fileID: 0}
     - target: {fileID: 7245169291895551035, guid: 1c5b760399295ed409133b212666cf1d,
         type: 3}
@@ -14244,7 +14275,7 @@ PrefabInstance:
     - target: {fileID: 7245169291895551035, guid: 1c5b760399295ed409133b212666cf1d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.67
+      value: -35.1
       objectReference: {fileID: 0}
     - target: {fileID: 7245169291895551035, guid: 1c5b760399295ed409133b212666cf1d,
         type: 3}
@@ -14324,12 +14355,12 @@ PrefabInstance:
     - target: {fileID: 9132316663814866225, guid: 1c5b760399295ed409133b212666cf1d,
         type: 3}
       propertyPath: m_Size.x
-      value: 24.19577
+      value: 13.136307
       objectReference: {fileID: 0}
     - target: {fileID: 9132316663814866225, guid: 1c5b760399295ed409133b212666cf1d,
         type: 3}
       propertyPath: m_Center.x
-      value: -1.9528618
+      value: -7.4825935
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c5b760399295ed409133b212666cf1d, type: 3}
@@ -25509,6 +25540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conditionCollections:
   - {fileID: 824679729}
+  - {fileID: 407848350}
   defaultReactionCollection: {fileID: 820561363}
 --- !u!1 &880627107
 GameObject:
@@ -25855,6 +25887,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!84 &890183412
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 1077
+  m_Height: 907
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 1
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!4 &891076546 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7752784240803398300, guid: d7deb4ab3a8e37b44bdb8daf1df221b4,
@@ -26539,7 +26606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7c438a8bb2c0649bf1d5445c7a8f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: I can't hold carry anymore!
+  message: I can't carry anymore!
   textColor: {r: 1, g: 1, b: 1, a: 1}
   delay: 0
 --- !u!4 &933462559 stripped
@@ -40738,6 +40805,53 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.355299, y: 3.3200374, z: 6.0739937}
   m_Center: {x: -0.6943488, y: 0.0661366, z: 1.4261951}
+--- !u!1 &1476923601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1476923603}
+  - component: {fileID: 1476923602}
+  m_Layer: 0
+  m_Name: HasCodeInteraction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1476923602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476923601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23a03641a68b6e4a879ecfb237b26cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reactions:
+  - {fileID: 1129099808}
+  - {fileID: 6672049}
+  - {fileID: 409570394}
+--- !u!4 &1476923603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476923601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1115463717}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1479260593
 GameObject:
   m_ObjectHideFlags: 0
@@ -43795,41 +43909,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!84 &1555914306
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1220
-  m_Height: 907
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 1
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!114 &1576907677
 MonoBehaviour:
   m_ObjectHideFlags: 0
