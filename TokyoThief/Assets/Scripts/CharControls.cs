@@ -22,12 +22,12 @@ public class CharControls : MonoBehaviour
     public LayerMask groundMask;
 
     bool isCrouched = false;
+    bool noStand = false;
+    bool isGrounded = true;
 
     Vector3 velocity;
     Vector3 forward, right;
     Vector3 currDir;
-
-    bool isGrounded = true;
 
     CharacterController controller;
 
@@ -51,6 +51,7 @@ public class CharControls : MonoBehaviour
         // How much to offset my raycasts from center of controller
         Vector3 capsuleOffset = new Vector3(controller.radius, 0, 0);
 
+        Ray upRay = new Ray(transform.position, Vector3.up); // Ray up the center of controller
         Ray centerRay = new Ray(transform.position, -Vector3.up); // Ray down the center of controller
         Ray frontRay = new Ray(transform.position + capsuleOffset, -Vector3.up); // Ray down the outside front of controller
         Ray backRay = new Ray(transform.position - capsuleOffset, -Vector3.up); // Ray down the outside back of controller
@@ -81,12 +82,23 @@ public class CharControls : MonoBehaviour
             isGrounded = true;
         }
 
+        if (Physics.Raycast(upRay, rayLength+2f, groundMask))
+        {
+            noStand = true;
+        }
+        else
+        {
+            noStand = false;
+        }
+
 
 
         // Debug draw grounding raycasts
+        /*
         Debug.DrawRay(transform.position, -transform.up * rayLength, Color.white);
         Debug.DrawRay(transform.position + capsuleOffset, -transform.up * rayLength, Color.white);
         Debug.DrawRay(transform.position - capsuleOffset, -transform.up * rayLength, Color.white);
+        */
 
         // reset velocity if we hit the ground or ceiling
         if ((isGrounded && velocity.y <= 0) || ((controller.collisionFlags & CollisionFlags.Above) != 0))
@@ -156,11 +168,14 @@ public class CharControls : MonoBehaviour
             }
             else
             {
-                controller.center = new Vector3(0, 2.4f, 0);
-                controller.height = controller.height * 2;
-                isCrouched = false;
-                moveSpeed = runSpeed;
-                animator.SetBool("Crawling", false);
+                if (!noStand)
+                {
+                    controller.center = new Vector3(0, 2.4f, 0);
+                    controller.height = controller.height * 2;
+                    isCrouched = false;
+                    moveSpeed = runSpeed;
+                    animator.SetBool("Crawling", false);
+                }
             }
         }
 
