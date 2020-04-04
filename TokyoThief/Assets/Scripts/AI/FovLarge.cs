@@ -25,7 +25,7 @@ public class FovLarge : MonoBehaviour
     Color colorAlert = new Color(1f, 0.5f, 0f);
     Color colorGuarding;
 
-    public EnemyPatrol enemyPatrol;
+    public EnemyPatrol enemyPatrol;    
 
     private void Start()
     {
@@ -82,6 +82,7 @@ public class FovLarge : MonoBehaviour
                     {
                         enemyPatrol.investigating = true;
                         enemyPatrol.investLoc = target;
+                        
                     }
                     //FindObjectOfType<GameManager>().EndGame();
                 }

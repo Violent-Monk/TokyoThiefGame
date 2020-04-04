@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public float restartDelay = 1f;
     GameOverMenu menu;
     
+    //Guard Whistle
+    	private AudioSource whistle;
+    
 
     private void Start()
     {
@@ -22,6 +25,10 @@ public class GameManager : MonoBehaviour
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
+                 //Play Whistle Sound
+                        whistle = GetComponent<AudioSource>();
+                        whistle.Play();
+            
             Debug.Log("GAME OVER");
             if (delay)
             {
