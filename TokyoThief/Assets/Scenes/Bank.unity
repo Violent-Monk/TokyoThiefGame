@@ -11226,8 +11226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 0
-  eraseRenderer: 0
 --- !u!1 &428978513
 GameObject:
   m_ObjectHideFlags: 0
@@ -13110,12 +13108,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2003487613}
   m_PrefabAsset: {fileID: 0}
---- !u!20 &496972249 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 5502783016288430228, guid: 5254a026081cb914c8ac092be44a7102,
-    type: 3}
-  m_PrefabInstance: {fileID: 2003487613}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &496972250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13128,26 +13120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78da3f00f3328541b4526c0b0b5ec5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineThickness: 1
-  lineIntensity: 0
-  fillAmount: 0
-  lineColor0: {r: 1, g: 0, b: 0, a: 1}
-  lineColor1: {r: 0, g: 1, b: 0, a: 1}
-  lineColor2: {r: 0, g: 0, b: 1, a: 1}
-  lineColor3: {r: 0, g: 1, b: 1, a: 1}
-  additiveRendering: 0
-  backfaceCulling: 1
-  cornerOutlines: 0
-  addLinesBetweenColors: 0
-  scaleWithScreenSize: 1
-  alphaCutoff: 0.5
-  flipY: 0
-  sourceCamera: {fileID: 496972249}
-  autoEnableOutlines: 1
-  outlineCamera: {fileID: 449086734}
-  outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 890183412}
-  extraRenderTexture: {fileID: 0}
 --- !u!1001 &497625440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14177,7 +14149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &520713955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48415,6 +48387,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d34d31d8c1f53488ad319914352262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1739533507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd940ae12c768540bb0f7a96f8574ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 2
+  gameObject: {fileID: 520713954}
+  activeState: 1
 --- !u!1 &1741956231
 GameObject:
   m_ObjectHideFlags: 0
@@ -51383,6 +51370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reactions:
   - {fileID: 1917741986}
+  - {fileID: 1739533507}
 --- !u!4 &1847269035
 Transform:
   m_ObjectHideFlags: 0
