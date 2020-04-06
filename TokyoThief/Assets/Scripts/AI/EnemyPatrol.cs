@@ -19,6 +19,7 @@ public class EnemyPatrol : MonoBehaviour
 
     public Animator animator;
     public Animator stateAnimator;
+    private AudioSource footsteps;
 
     public bool random;
 
@@ -40,6 +41,7 @@ public class EnemyPatrol : MonoBehaviour
         cam = GameObject.Find("CameraObject").transform;
         fov = GetComponentInChildren<FoV>();
         agent = GetComponent<NavMeshAgent>();
+        footsteps = GetComponent<AudioSource>();
 
         investLoc = null;
         waiting = false;
@@ -66,12 +68,22 @@ public class EnemyPatrol : MonoBehaviour
     {
         if (agent.isStopped)
         {
-            animator.SetBool("Idle", true);
+            animator.SetBool("Idle", true);   
         }
         else
         {
             animator.SetBool("Idle", false);
         }
+
+        if (animator.GetBool("Idle") == true || Time.timeScale < 1f)
+        {
+            footsteps.Stop();
+        }
+        else if (!footsteps.isPlaying)
+        {
+            footsteps.Play();
+        }
+
         if (investigating == false)
         {
             nextLoc = moveSpots[nextSpot].position;

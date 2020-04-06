@@ -10,9 +10,12 @@ public class GameOverMenu : MonoBehaviour
 
     GameObject gameOverMenuUI;
 
+    private AudioSource[] allAudioSources;
+
     private void Start()
     {
-        gameOverMenuUI = transform.GetChild(0).gameObject;   
+        gameOverMenuUI = transform.GetChild(0).gameObject;
+        allAudioSources = FindObjectsOfType<AudioSource>();
     }
 
     public void ResetGame()
@@ -26,6 +29,13 @@ public class GameOverMenu : MonoBehaviour
     public void Pause()
     {
         gameOverMenuUI.SetActive(true);
+        foreach (AudioSource audioS in allAudioSources)
+        {
+            if (!audioS.CompareTag("NoPause"))
+            {
+                audioS.Pause();
+            }            
+        }
         Time.timeScale = 0f;
         GameIsPaused = true;
     }

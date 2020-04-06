@@ -37,12 +37,15 @@ public class CharControls : MonoBehaviour
 
     Interactable currentInteractable;
 
+    AudioSource footsteps;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         Reorient();
         hiroRenderer = controller.GetComponentInChildren<SpriteRenderer>();
+        footsteps = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,7 +54,9 @@ public class CharControls : MonoBehaviour
         // How much to offset my raycasts from center of controller
         Vector3 capsuleOffset = new Vector3(controller.radius, 0, 0);
 
-        Ray upRay = new Ray(transform.position, Vector3.up); // Ray up the center of controller
+        Ray centerRayUp = new Ray(transform.position, Vector3.up); // Ray up the center of controller
+        Ray frontRayUp = new Ray(transform.position + capsuleOffset, Vector3.up); // Ray up the outside front of controller
+        Ray backRayUp = new Ray(transform.position - capsuleOffset, Vector3.up); // Ray up the outside back of controller
         Ray centerRay = new Ray(transform.position, -Vector3.up); // Ray down the center of controller
         Ray frontRay = new Ray(transform.position + capsuleOffset, -Vector3.up); // Ray down the outside front of controller
         Ray backRay = new Ray(transform.position - capsuleOffset, -Vector3.up); // Ray down the outside back of controller
@@ -82,13 +87,28 @@ public class CharControls : MonoBehaviour
             isGrounded = true;
         }
 
-        if (Physics.Raycast(upRay, rayLength+2f, groundMask))
+        // Check to make sure there's room to stand
+        if (!Physics.Raycast(centerRayUp, rayLength + 3f, groundMask))
         {
-            noStand = true;
+            if (!Physics.Raycast(frontRayUp, rayLength + 3f, groundMask))
+            {
+                if (!Physics.Raycast(backRayUp, rayLength + 3f, groundMask))
+                {
+                    noStand = false;
+                }
+                else
+                {
+                    noStand = true;
+                }
+            }
+            else
+            {
+                noStand = true;
+            }
         }
         else
         {
-            noStand = false;
+            noStand = true;
         }
 
 
@@ -121,13 +141,20 @@ public class CharControls : MonoBehaviour
             horzMovement = Input.GetAxis("HorizontalKey");
             vertMovement = Input.GetAxis("VerticalKey");
             animator.SetFloat("Magnitude", Mathf.Abs(horzMovement) + Mathf.Abs(vertMovement));
+            if (((Mathf.Abs(horzMovement) + Mathf.Abs(vertMovement)) > 0) && !footsteps.isPlaying && !isCrouched && isGrounded)
+            {
+                footsteps.Play();
+            }
+            else if (((Mathf.Abs(horzMovement) + Mathf.Abs(vertMovement)) == 0) || isCrouched || !isGrounded || Time.timeScale < 1f)
+            {
+                footsteps.Stop();
+            }
             if (Input.anyKey)
             {
                 if (Input.GetKeyDown(KeyCode.F) && currentInteractable != null)
                 {
                     currentInteractable.Interact();
                 }
-
                 Move();
             }
         }

@@ -11,16 +11,19 @@ public class PauseMenu : MonoBehaviour
     GameObject pauseMenuUI;
     GameObject controlsMenuUI;
 
+    private AudioSource[] allAudioSources;
+
     private void Start()
     {
         pauseMenuUI = transform.GetChild(0).gameObject;
         controlsMenuUI = transform.GetChild(1).gameObject;
+        allAudioSources = FindObjectsOfType<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && FindObjectOfType<GameManager>().gameHasEnded == false)
         {
             if (GameIsPaused)
             {
@@ -35,6 +38,10 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        foreach (AudioSource audioS in allAudioSources)
+        {
+            audioS.Play();
+        }
         controlsMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -43,6 +50,10 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
+        foreach (AudioSource audioS in allAudioSources)
+        {
+            audioS.Pause();
+        }
         Time.timeScale = 0f;
         GameIsPaused = true;
     }

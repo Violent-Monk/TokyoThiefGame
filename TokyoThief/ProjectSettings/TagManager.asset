@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - WallWide
+  - NoPause
   layers:
   - Default
   - TransparentFX

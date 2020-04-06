@@ -27,6 +27,8 @@ public class FoV : MonoBehaviour
     Color colorAlert = Color.red;
     Color colorGuarding;
 
+    AudioSource whistle;
+
     private void Start()
     {
         viewMesh = new Mesh();
@@ -35,6 +37,7 @@ public class FoV : MonoBehaviour
         StartCoroutine("FindTargetsWithDelay", .1f);
         fovMat = viewMeshFilter.GetComponent<Renderer>().material;
         colorGuarding = fovMat.color;
+        whistle = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -75,9 +78,10 @@ public class FoV : MonoBehaviour
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask)) // check for obstacles
                 {
                     // we have line of sight
+                    stateAnimator.SetBool("Alert", true);
                     visibleTargets.Add(target);
                     fovMat.SetColor("_Color", colorAlert);
-                    stateAnimator.SetBool("Alert", true);
+                    whistle.Play();
                     FindObjectOfType<GameManager>().EndGame(false);
                 }
             }
