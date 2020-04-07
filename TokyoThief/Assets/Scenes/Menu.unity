@@ -1327,6 +1327,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7440213130526951691, guid: 9ec2e47d5e1739846b3bdaea21bfa42a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.5025
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440213130526951691, guid: 9ec2e47d5e1739846b3bdaea21bfa42a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -5.005
+      objectReference: {fileID: 0}
     - target: {fileID: 7440213130953676281, guid: 9ec2e47d5e1739846b3bdaea21bfa42a,
         type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -1397,12 +1407,12 @@ PrefabInstance:
     - target: {fileID: 7440213131840629049, guid: 9ec2e47d5e1739846b3bdaea21bfa42a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 4.43
+      value: -2.4975
       objectReference: {fileID: 0}
     - target: {fileID: 7440213131840629049, guid: 9ec2e47d5e1739846b3bdaea21bfa42a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 18.85
+      value: 4.995
       objectReference: {fileID: 0}
     - target: {fileID: 7440213131942666257, guid: 9ec2e47d5e1739846b3bdaea21bfa42a,
         type: 3}
@@ -1673,6 +1683,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440213132229183526, guid: 9ec2e47d5e1739846b3bdaea21bfa42a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440213132229183526, guid: 9ec2e47d5e1739846b3bdaea21bfa42a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 7768164254738747756, guid: 9ec2e47d5e1739846b3bdaea21bfa42a,
         type: 3}

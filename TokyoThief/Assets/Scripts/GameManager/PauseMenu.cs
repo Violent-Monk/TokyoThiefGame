@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
 
     GameObject pauseMenuUI;
     GameObject controlsMenuUI;
+    GameObject optionsMenuUI;
 
     private AudioSource[] allAudioSources;
 
@@ -17,6 +18,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI = transform.GetChild(0).gameObject;
         controlsMenuUI = transform.GetChild(1).gameObject;
+        optionsMenuUI = transform.GetChild(2).gameObject;
         allAudioSources = FindObjectsOfType<AudioSource>();
     }
 
@@ -38,9 +40,13 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(false);
         foreach (AudioSource audioS in allAudioSources)
         {
-            audioS.Play();
+            if (!audioS.CompareTag("NoPause"))
+            {
+                audioS.Play();
+            }           
         }
         controlsMenuUI.SetActive(false);
         Time.timeScale = 1f;
