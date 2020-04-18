@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*Based on code from Sebastion Lague
+ https://www.youtube.com/watch?v=rQG9aUWarwE
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
