@@ -7,7 +7,6 @@ public class Rotate : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Transform gameCam;
     CamControls cam;
-    //Camera gameCam;
     GameObject spriteNE;
     GameObject spriteSE;
     GameObject spriteSW;
@@ -15,7 +14,6 @@ public class Rotate : MonoBehaviour
     GameObject currActive;
 
     CamControls camControls;
-    //bool swap = false; // determine if we should change sprites because the camera rotated
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +34,9 @@ public class Rotate : MonoBehaviour
         cam = GameObject.Find("CameraObject").transform.GetComponent<CamControls>();
 
         swap(camControls.camDir);
-        /* cam = GameObject.Find("CameraObject").transform;
-
-         gameCam.transparencySortMode = TransparencySortMode.CustomAxis;
-         gameCam.transparencySortAxis = new Vector3(1f, 0f, 1f);*/
     }
 
+    // swap to the appropriate sprite set for the new camera angle
     public void swap(string camDir)
     {
         if (camDir == "SW")
